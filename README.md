@@ -53,17 +53,30 @@ ___
 
 ## app file tree
 
+
+
 ```
 .
 ├── README.md
 ├── assets
-│   ├── css
-│   │   └── style.css
-│   ├── images
-│   └── javascript
-│       └── script.js
-└── index.html
-
+│   ├── css
+│   │   └── style.css
+│   ├── images
+│   │   ├── kanjamadBosel-project.png
+│   │   ├── logo-page.png
+│   │   ├── logo.png
+│   │   ├── page-down.jpg
+│   │   └── page-top.jpg
+│   ├── images-cart
+│   └── javascript
+│       ├── jquery-3.4.1.js
+│       └── script.js
+├── index.html
+├── kids.html
+├── men.html
+├── singleproduct.html
+├── store.html
+└── women.html
 ```
 
 ---
