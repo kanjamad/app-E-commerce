@@ -1,5 +1,4 @@
 ![Logo](assets/images/logo.png "Logo")
-
 # AP Shopping online
 
 This app ....
@@ -98,4 +97,9 @@ Wireframs for home page, order comfirmation form and my address page
 
 ## Additional Resources
 1. <a href="https://www.iconfinder.com/search/?q=shopping" target="_blank">Shopping icon</a>
-1. <a href="https://fontawesome.com/" target="_blank"> Navbar Icon</a>
+2. <a href="https://fontawesome.com/" target="_blank"> Navbar Icon</a>
+3. <a href="https://jquery.com/download/" target="_blank"> Downloading jQuery </a>
+4. <a href="https://git.generalassemb.ly/sf-sei-1/intro-to-jquery" target="_blank"> Intro to jQuery </a>
+5. <a href="http://www.stickpng.com/" target="_blank"> Images </a>
+5. <a href="https://fonts.google.com/" target="_blank"> Google Fonts </a>
+5. <a href="https://google-webfonts-helper.herokuapp.com/fonts/courgette?subsets=latin" target="_blank"> Google-webfonts-helper </a>
