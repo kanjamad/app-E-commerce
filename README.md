@@ -1,4 +1,4 @@
-![Logo](assets/images/logo.png "Logo")
+![Logo](assets/images/logo-icon.png "Logo")
 # AP Shopping online
 
 This app ....
@@ -6,6 +6,8 @@ This app ....
 * [Link to project hosted on Heroku](https://#name.herokuapp.com/)
 * [Link to project hosted on Github](https://github.com/kanjamad/app-E-commerce)
 * [Link to project hosted on trello](https://trello.com/b/tk3FQbjQ/final-project)
+* [Link to backend API server project hosted on heroku](https://kanjamadapishopping.herokuapp.com/)
+* [Link to backend API server project hosted on Github](https://github.com/kanjamad/e-commerce-API)
 
 ---
 
@@ -27,6 +29,7 @@ ___
 6. User can shopping from category.
 7. User can add products, remove products from cart and read commemt with out login.
 8. User need to login if want to order and write comment.
+9. User can payment
 
 ___
 
