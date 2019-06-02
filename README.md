@@ -84,7 +84,7 @@ ___
 
 ## Highlighted code
 
-![cart-items](assets/images/cart-item-H.png "Cart items")
+![cart-items](assets/images/readme/cart-item-H.png "Cart items")
 
 ```
 .cart-items {
@@ -131,15 +131,15 @@ root elemnt is 16px then 1 rem = 16px for all elements.If font-size is not expli
 ### Planning
 Brainstorm => I use the tables to draw out my ideas for the project., draw wireframes, write entity relationship diagram (ERD).
 
-![expressFileTree](assets/images/kanjamadBosel-project.png "expree file tree")
+![expressFileTree](assets/images/readme/kanjamadBosel-project.png "expree file tree")
 
 ERD, MVP, Strech goal, wireframes Profile page and Product page
 
-![ideal](assets/images/page-down.jpg "ideal")
+![ideal](assets/images/readme/page-down.jpg "ideal")
 
 Wireframs for home page, order comfirmation form and my address page
 
-![ideal](assets/images/page-top.jpg "ideal")
+![ideal](assets/images/readme/page-top.jpg "ideal")
 
 ---
 
