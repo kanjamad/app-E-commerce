@@ -15,6 +15,24 @@ body {
 .text-slanted {
   font-family: "Calligraffitti", cursive;
 }
+.text-yellow {
+  color: var(--mainYellow);
+}
+.btn-yellow {
+  background: var(--mainYellow);
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: var(--mainBlack);
+  border-radius: 0 !important ;
+  -webkit-border-radius: 0 !important ;
+  -moz-border-radius: 0 !important ;
+  -ms-border-radius: 0 !important ;
+  -o-border-radius: 0 !important ;
+}
+.btn-yellow:hover {
+  background: var(--mainBlack);
+  color: var(--mainYellow);
+}
 
 /* ####################################### HomePage #################################### */
 /*--------------------
@@ -79,4 +97,55 @@ body {
   -moz-border-radius:50% ;
   -ms-border-radius:50% ;
   -o-border-radius:50% ;
+}
+/*--------------------
+        categories
+ ----------------------- */
+.categories-link {
+  color: var(--mainBlack);
+  text-decoration: none;
+}
+.categories-link:hover {
+  color: var(--mainGrey);
+  text-decoration: none;
+}
+.categories-underline {
+  height: 0.1rem;
+  width: 5rem;
+  background: var(--mainYellow);
+}
+.category-container {
+  position: relative;
+}
+.category-img {
+  transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+}
+.category-container:hover .category-img {
+  opacity: 0.5;
+}
+.category-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.2rem 3rem 0.2rem 0.2rem;
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+  opacity: 0;
+  transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  text-decoration: none !important;
+}
+.category-link:hover {
+  color: var(--TransGrey);
+}
+.category-container:hover .category-link {
+  opacity: 1;
 }
