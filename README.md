@@ -56,8 +56,6 @@ ___
 
 ## app file tree
 
-
-
 ```
 .
 ├── README.md
@@ -84,7 +82,23 @@ ___
 
 ---
 
-## app file tree
+## Highlighted code
+
+![cart-items](assets/images/cart-item-H.png "Cart items")
+
+```
+.cart-items {
+  color: var(--mainWhite);
+  position: absolute;
+  top: -15%;
+  right: -25%;
+  padding: 0.2rem 0.3rem;
+  background: var(--mainYellow);
+  font-size: 0.1rem;
+  border-radius: 50%;
+}
+
+```
 
 ### CSS units for font-size: px | em | rem
 
