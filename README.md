@@ -1,4 +1,4 @@
-![Logo](assets/images/logo-icon.png "Logo")
+![Logo](assets/images/logo.png "Logo")
 # AP Shopping online
 
 This app ....
@@ -97,11 +97,11 @@ ___
 ---
 
 ### Planning
-Brainstorm => I use 4 tables to write my project ideal, draw wireframs, write entity relationship diagram (ERD).
+Brainstorm => I use the tables to draw out my ideas for the project., draw wireframes, write entity relationship diagram (ERD).
 
 ![expressFileTree](assets/images/kanjamadBosel-project.png "expree file tree")
 
-ERD, MVP, Strech goal, wireframs Profile page and Product page
+ERD, MVP, Strech goal, wireframes Profile page and Product page
 
 ![ideal](assets/images/page-down.jpg "ideal")
 
@@ -117,5 +117,6 @@ Wireframs for home page, order comfirmation form and my address page
 3. <a href="https://jquery.com/download/" target="_blank"> Downloading jQuery </a>
 4. <a href="https://git.generalassemb.ly/sf-sei-1/intro-to-jquery" target="_blank"> Intro to jQuery </a>
 5. <a href="http://www.stickpng.com/" target="_blank"> Images </a>
-5. <a href="https://fonts.google.com/" target="_blank"> Google Fonts </a>
-5. <a href="https://google-webfonts-helper.herokuapp.com/fonts/courgette?subsets=latin" target="_blank"> Google-webfonts-helper </a>
+6. <a href="https://fonts.google.com/" target="_blank"> Google Fonts </a>
+7. <a href="https://google-webfonts-helper.herokuapp.com/fonts/courgette?subsets=latin" target="_blank"> Google-webfonts-helper </a>
+8. <a href="https://medium.com/free-code-camp/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11" target="_blank"> The CSS Handbook </a>
