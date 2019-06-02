@@ -171,9 +171,9 @@ body {
  ----------------------- */
 .home-filler {
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), 
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 121, 224, 0.5)), to(rgba(0, 0, 0, 0.5))), 
   url("../images/home-filler.png") center/cover fixed no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+  background: linear-gradient(rgba(245, 121, 224, 0.5), rgba(0, 0, 0, 0.5)), 
   url("../images/home-filler.png") center/cover fixed no-repeat;
 }
 .collection-link {
