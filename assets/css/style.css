@@ -53,3 +53,14 @@ body {
   font-size: 0.1rem;
   border-radius: 50%;
 }
+/*--------------------
+        banner
+ ----------------------- */
+.banner {
+  min-height: calc(100vh - 101px);
+  background: url("/assets/images/banner.JPG");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;   
+}
