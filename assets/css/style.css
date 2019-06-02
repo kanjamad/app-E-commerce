@@ -6,6 +6,7 @@
   --mainBlack: #071013;
   --mainGrey: #9b9999;
   --TransGrey: rgba(0, 0, 0, 0.1);
+  --mainPink: #ef7998;
 }
 body {
   color: var(--mainBlack);
@@ -138,7 +139,8 @@ body {
   padding: 0.2rem 3rem 0.2rem 0.2rem;
   background: var(--mainWhite);
   color: var(--mainBlack);
-  clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
   opacity: 0;
   transition: all 1s linear;
   -webkit-transition: all 1s linear;
@@ -158,6 +160,8 @@ body {
  ----------------------- */
 .home-filler {
   min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), 
+  url("../images/home-filler.png") center/cover fixed no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
   url("../images/home-filler.png") center/cover fixed no-repeat;
 }
@@ -174,4 +178,65 @@ body {
   width: 5rem;
   background: var(--mainYellow);
   margin: 0 auto;
+}
+/*--------------------
+  featured section or best seller
+ ----------------------- */
+.featured-container {
+  background: var(--mainWhite);
+  position: relative;
+  overflow: hidden;
+}
+.featured-search-icon {
+  background: var(--mainWhite);
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-size: 1.2rem;
+  -webkit-transform: translateX(110%);
+  transform: translateX(110%);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+  -moz-transform: translateX(110%);
+  -ms-transform: translateX(110%);
+  -o-transform: translateX(110%);
+}
+.featured-container:hover .featured-search-icon {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+.featured-store-link {
+  background: var(--mainYellow);
+  color: var(--mainBlack);
+  padding: 0.2rem 0.4rem;
+  position: absolute;
+  right: 0;
+  top: 70%;
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.featured-store-link:hover {
+  color: var(--mainBlack);
+}
+.featured-container:hover .featured-store-link {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+/*--------------------
+      beach seson
+ ----------------------- */
+.banner-title {
+  color: var(--mainPink);
+  font-size: 64px;
+  font-size: 4rem;
 }
