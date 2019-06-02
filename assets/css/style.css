@@ -15,6 +15,24 @@ body {
 .text-slanted {
   font-family: "Calligraffitti", cursive;
 }
+.text-yellow {
+  color: var(--mainYellow);
+}
+.btn-yellow {
+  background: var(--mainYellow);
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: var(--mainBlack);
+  border-radius: 0 !important ;
+  -webkit-border-radius: 0 !important ;
+  -moz-border-radius: 0 !important ;
+  -ms-border-radius: 0 !important ;
+  -o-border-radius: 0 !important ;
+}
+.btn-yellow:hover {
+  background: var(--mainBlack);
+  color: var(--mainYellow);
+}
 
 /* ####################################### HomePage #################################### */
 /*--------------------
