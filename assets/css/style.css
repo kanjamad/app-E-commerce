@@ -155,14 +155,25 @@ body {
 .category-container:hover .category-link {
   opacity: 1;
 }
+
+/*--------------------
+      beach seson
+ ----------------------- */
+.banner-title {
+  color: var(--mainPink);
+  font-size: 64px;
+  font-size: 4rem;
+}
+
+
 /*--------------------
       home filler
  ----------------------- */
 .home-filler {
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), 
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 121, 224, 0.5)), to(rgba(0, 0, 0, 0.5))), 
   url("../images/home-filler.png") center/cover fixed no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+  background: linear-gradient(rgba(245, 121, 224, 0.5), rgba(0, 0, 0, 0.5)), 
   url("../images/home-filler.png") center/cover fixed no-repeat;
 }
 .collection-link {
@@ -233,10 +244,18 @@ body {
 }
 
 /*--------------------
-      beach seson
+      footer
  ----------------------- */
-.banner-title {
-  color: var(--mainPink);
-  font-size: 64px;
-  font-size: 4rem;
+.footer {
+  background: rgba(0, 0 ,0 , 0.8);
+}
+.footer-title {
+  border: 0.2rem solid var(--mainYellow);
+  padding: 0.4rem;
+}
+.footer-icon {
+  color: var(--mainYellow);
+}
+.footer-icon:hover {
+  color: var(--mainWhite);
 }
