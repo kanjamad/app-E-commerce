@@ -84,6 +84,20 @@ ___
 
 ---
 
+## app file tree
+
+### CSS units for font-size: px | em | rem
+
+px
+Pixels (px) are referred to as absolute units because they will always be the same size regardless of any other related settings.What if a user changes the default font-size of browser (or device)? Your header’s font-size (say 20px) will remain 20 px.
+
+em
+An em is equal to the computed font-size of that element’s parent. For example, If there is a div element defined with font-size: 16px then for that div and for its children 1em = 16px.
+
+rem 
+Values are relative to the root html element, not to the parent element. That is, If font-size of the root element is 16px then 1 rem = 16px for all elements. If font-size is not explicitly defined in root element then 1rem will be equal to the default font-size provided by the browser (usually 16px).
+---
+
 ## Deadlines
 
 ###### When is the project due?
@@ -120,3 +134,5 @@ Wireframs for home page, order comfirmation form and my address page
 6. <a href="https://fonts.google.com/" target="_blank"> Google Fonts </a>
 7. <a href="https://google-webfonts-helper.herokuapp.com/fonts/courgette?subsets=latin" target="_blank"> Google-webfonts-helper </a>
 8. <a href="https://medium.com/free-code-camp/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11" target="_blank"> The CSS Handbook </a>
+9. <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank"> CSS values and units
+ </a>

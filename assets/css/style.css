@@ -17,3 +17,41 @@ body {
 .text-stanted {
     font-family: "Calligraffitti", cursive;
 }
+
+/* ######################################## HomePage ######################################## */
+/* --------------------------
+        navbar
+----------------------------*/
+.navbar-toggler {
+    outline: none !important;
+    border: none;
+    font-size: 2.2rem;
+    color: var(--mainYellow) !important;
+}
+.nav-link {
+    font-size: 1.6rem;
+    border-bottom: 0.1rem solid var(--mainWhite);
+}
+.nav-active {
+    border-bottom: 0.1rem solid var(--mainYellow);
+}
+.navbar-icon {
+    font-size: 1.6rem;
+}
+.navbar-cart-icon {
+    color: var(--mainBlack);
+    position: relative;
+}
+.navbar-cart-icon:hover {
+    color: var(--mainGrey);
+}
+.cart-items {
+    color: var(--mainWhite);
+    position: absolute;
+    top: -15%;
+    right: -25%;
+    padding: 0.2rem 0.3rem;
+    background: var(--mainYellow);
+    font-size: 0.1rem;
+    border-radius: 50%;
+}
