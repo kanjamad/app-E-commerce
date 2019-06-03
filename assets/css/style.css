@@ -314,3 +314,36 @@ body {
 .footer-icon:hover {
   color: var(--mainWhite);
 }
+
+/* ########################## women - men- kids produts page ############################## */
+.products-categories-underline {
+  height: 0.2rem;
+  width: 5rem;
+  background: var(--mainYellow);
+}
+.products-categories-link {
+  color: var(--mainBlack);
+    text-decoration: none !important; 
+}
+.products-categories-link:hover {
+  color: var(--mainPink);
+}
+.products-color {
+  width: 1rem;
+  height: 1rem;
+}
+.products-color-black {
+  background: black;
+}
+.products-color-red {
+  background: red;
+}
+.products-color-blue {
+  background: blue;
+}
+.products-color-yellow {
+  background: yellow;
+}
+.products-color-green {
+  background: green;
+}
