@@ -119,6 +119,9 @@ ___
   transform: translateX(110%);
   transition: all 1s ease-in-out;
 }
+.featured-container:hover .featured-store-link {
+  transform: translateX(0%);
+}
 ```
 ___
 
