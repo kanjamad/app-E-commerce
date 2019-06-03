@@ -34,42 +34,29 @@ body {
   background: var(--mainBlack);
   color: var(--mainYellow);
 }
-
-/* .banner-women-products,
-.banner-men-products,
-.banner-kids-products {
-  min-height: 60vh;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.5),
-  ),
-  url("../images/women-page.jpg") center/cover fixed no-repeat;
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: var(--mainBlack);
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  border: 0.1rem solid var(--mainBlack);
 }
-.banner-men-products {
-  min-height: 60vh;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.5),
-  ),
-  url("../images/men-page.jpg") center/cover fixed no-repeat;
+.btn-black:hover {
+  background: var(--mainBlack);
+  color: var(--mainWhite);
 }
-.banner-kids-products {
-  min-height: 60vh;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.5),
-  ),
-  url("../images/kids-page.jpg") center/cover fixed no-repeat;
-} */
-
-
-
 .banner-women-products,
 .banner-men-products,
-.banner-kids-products {
+.banner-kids-products
+.banner-payment {
   min-height: 60vh;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
+      rgba(245, 121, 224, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
     url("../images/women-page.jpg") center/cover fixed no-repeat;
@@ -85,11 +72,22 @@ body {
 .banner-kids-products {
   min-height: 60vh;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
+      rgba(245, 121, 224, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
     url("../images/kids-page.jpg") center/cover fixed no-repeat;
 }
+.banner-payment {
+  min-height: 60vh;
+  background: linear-gradient(
+      rgba(245, 121, 224, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../images/payment.jpg") center/cover fixed no-repeat;
+}
+
+
+
 /* ####################################### HomePage #################################### */
 /*--------------------
         navbar
