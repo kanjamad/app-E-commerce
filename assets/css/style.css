@@ -35,6 +35,61 @@ body {
   color: var(--mainYellow);
 }
 
+/* .banner-women-products,
+.banner-men-products,
+.banner-kids-products {
+  min-height: 60vh;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5),
+  ),
+  url("../images/women-page.jpg") center/cover fixed no-repeat;
+}
+.banner-men-products {
+  min-height: 60vh;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5),
+  ),
+  url("../images/men-page.jpg") center/cover fixed no-repeat;
+}
+.banner-kids-products {
+  min-height: 60vh;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5),
+  ),
+  url("../images/kids-page.jpg") center/cover fixed no-repeat;
+} */
+
+
+
+.banner-women-products,
+.banner-men-products,
+.banner-kids-products {
+  min-height: 60vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../images/women-page.jpg") center/cover fixed no-repeat;
+}
+.banner-men-products {
+  min-height: 60vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../images/men-page.jpg") center/cover fixed no-repeat;
+}
+.banner-kids-products {
+  min-height: 60vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../images/kids-page.jpg") center/cover fixed no-repeat;
+}
 /* ####################################### HomePage #################################### */
 /*--------------------
         navbar
