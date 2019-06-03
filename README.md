@@ -99,6 +99,27 @@ ___
 }
 
 ```
+
+
+![cart-items](assets/images/readme/cart-in-out.png "add to cart")
+
+```
+.featured-container {
+  background: var(--mainWhite);
+  position: relative;
+  overflow: hidden;
+}
+.featured-store-link {
+  background: var(--mainYellow);
+  color: var(--mainBlack);
+  padding: 0.2rem 0.4rem;
+  position: absolute;
+  right: 0;
+  top: 70%;
+  transform: translateX(110%);
+  transition: all 1s ease-in-out;
+}
+```
 ___
 
 ### CSS units for font-size: px | em | rem
