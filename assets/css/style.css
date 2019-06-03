@@ -366,3 +366,10 @@ body {
   border-color: var(--mainBlack); 
   opacity: 1;
 }
+.product-info-link {
+  color: var(--mainGrey);
+  text-decoration: none !important;
+}
+.product-info-link:hover {
+  color: var(--mainYellow);
+}

@@ -178,4 +178,5 @@ Wireframs for home page, order comfirmation form and my address page
 8. <a href="https://medium.com/free-code-camp/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11" target="_blank"> The CSS Handbook </a>
 9. <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank"> CSS values and units </a>
 10. <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank"> Bootstrap Spacing </a>
+11. <a href="https://getbootstrap.com/docs/4.0/components/jumbotron/" target="_blank"> Bootstrap Jumbotron </a>
  
