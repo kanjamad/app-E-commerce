@@ -179,4 +179,6 @@ Wireframs for home page, order comfirmation form and my address page
 9. <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank"> CSS values and units </a>
 10. <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank"> Bootstrap Spacing </a>
 11. <a href="https://getbootstrap.com/docs/4.0/components/jumbotron/" target="_blank"> Bootstrap Jumbotron </a>
+12. <a href="https://codyhouse.co/gem/mega-dropdown" target="_blank"> mega-dropdown component </a>
+13. <a href="https://api.jquery.com/jquery.ajax/#jQuery-ajax-url-settings" target="_blank"> jQuery.ajax() </a>
  
