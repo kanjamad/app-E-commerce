@@ -13,6 +13,7 @@ body {
   background: var(--mainWhite);
   font-family: "Mali", cursive;
 }
+
 .text-slanted {
   font-family: "Calligraffitti", cursive;
 }
@@ -338,6 +339,7 @@ body {
 .old-price {
   text-decoration: line-through;
 }
+
 
 /*--------------------
       footer
