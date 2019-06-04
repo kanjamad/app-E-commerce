@@ -22,7 +22,7 @@ function getProductHtml(product){
         <!-- single product -->
         <div class="col-10 mx-auto col-md-6 col-lg-4">
             <div class="featured-container p-5">
-                <img src="${product.images[1]}" alt="${product.productName}"/>
+                <img  src="${product.images[1]}" alt="${product.productName}"/>
                 <!-- <span class="featured-search-icon" 
                 data-toggle="modal" 
                 data-target="#productModal"><i class="fas fa-search"></i></span> -->
