@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- google fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Courgette"rel="stylesheet"/>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- main css -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <title>Shopping Address | AP shopping </title>
+</head>
+<body>
+
+
+    <div class="col-10 mx-auto col-md-6 col-lg-6 my-5">
+        <div class="shipping-dark p-3 shadow-lg-rounded">
+            <div class="pt-3">
+                <h2 class="text-white">
+                    Shipping Address
+                </h2>
+            </div>
+
+            <form class="mt-5">
+
+                <div class="form-group">
+                    
+                    <select class="form-control form-control-sm bg-light" for="country"  name="country" placeholder="Country" name="country" id="country">
+                            <option value="">Your country</option>
+                            <option value="AR">Argentina</option>
+                            <option value="AU">Australia</option>
+                            <option value="AT">Austria</option>
+                            <option value="BY">Belarus</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BA">Bosnia and Herzegovina</option>
+                            <option value="BR">Brazil</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="CA">Canada</option>
+                            <option value="CL">Chile</option>
+                            <option value="CN">China</option>
+                            <option value="CO">Colombia</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="HR">Croatia</option>
+                            <option value="CU">Cuba</option>
+                            <option value="CY">Cyprus</option>
+                            <option value="CZ">Czech Republic</option>
+                            <option value="DK">Denmark</option>
+                            <option value="DO">Dominican Republic</option>
+                            <option value="EG">Egypt</option>
+                            <option value="EE">Estonia</option>
+                            <option value="FI">Finland</option>
+                            <option value="FR">France</option>
+                            <option value="GE">Georgia</option>
+                            <option value="DE">Germany</option>
+                            <option value="GI">Gibraltar</option>
+                            <option value="GR">Greece</option>
+                            <option value="HK">Hong Kong S.A.R., China</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IS">Iceland</option>
+                            <option value="IN">India</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="IR">Iran</option>
+                            <option value="IQ">Iraq</option>
+                            <option value="IE">Ireland</option>
+                            <option value="IL">Israel</option>
+                            <option value="IT">Italy</option>
+                            <option value="JM">Jamaica</option>
+                            <option value="JP">Japan</option>
+                            <option value="KZ">Kazakhstan</option>
+                            <option value="KW">Kuwait</option>
+                            <option value="KG">Kyrgyzstan</option>
+                            <option value="LA">Laos</option>
+                            <option value="LV">Latvia</option>
+                            <option value="LB">Lebanon</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="MK">Macedonia</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="MT">Malta</option>
+                            <option value="MX">Mexico</option>
+                            <option value="MD">Moldova</option>
+                            <option value="MC">Monaco</option>
+                            <option value="ME">Montenegro</option>
+                            <option value="MA">Morocco</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="KP">North Korea</option>
+                            <option value="NO">Norway</option>
+                            <option value="PK">Pakistan</option>
+                            <option value="PS">Palestinian Territory</option>
+                            <option value="PE">Peru</option>
+                            <option value="PH">Philippines</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="QA">Qatar</option>
+                            <option value="RO">Romania</option>
+                            <option value="RU">Russia</option>
+                            <option value="SA">Saudi Arabia</option>
+                            <option value="RS">Serbia</option>
+                            <option value="SG">Singapore</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="SI">Slovenia</option>
+                            <option value="ZA">South Africa</option>
+                            <option value="KR">South Korea</option>
+                            <option value="ES">Spain</option>
+                            <option value="LK">Sri Lanka</option>
+                            <option value="SE">Sweden</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="TW">Taiwan</option>
+                            <option value="TH">Thailand</option>
+                            <option value="TN">Tunisia</option>
+                            <option value="TR">Turkey</option>
+                            <option value="UA">Ukraine</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="US">USA</option>
+                            <option value="UZ">Uzbekistan</option>
+                            <option value="VN">Vietnam</option>
+                        </select>
+                </div>
+                
+
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-sm bg-light" name="fullName" placeholder="First Name">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-sm bg-light" name="lastName" placeholder="Last Name">
+                </div>
+
+                <div class="form-group">
+                    <input type="text"  class="form-control form-control-sm bg-light" name="phone" placeholder="Phone" >
+                </div>
+
+                <div class="form-group">
+                    <input type="text"  class="form-control form-control-sm bg-light" name="state" placeholder="State" >
+                </div>
+
+                <div class="form-group">
+                    <input type="text"  class="form-control form-control-sm bg-light" name="zip" placeholder="Zip" >
+                </div>
+
+                <div class="form-group">
+                    <input type="text"  class="form-control form-control-sm bg-light" name="address1" placeholder="Address" >
+                </div>
+
+                <div class="form-group">
+                    <input type="text"  class="form-control form-control-sm bg-light" name="address2" placeholder="Address 2" >
+                </div>
+
+                <div class="mt-5">
+                    <button class="btn btn-sm btn-light col">Save</button>
+                </div>
+
+                <div class="mt-5">
+                    <p class="text-white text-center">
+                        Already have an account?
+                        <a href="#" class="text-warning">Click here to Login</a>
+                    </p>    
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+    
+
+    <!-- bootstap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="assets/javascript/jquery-3.4.1.js"></script>
+
+    <!-- main JavaScript -->
+    <script src="assets/javascript/script.js"></script>
+
+</body>
+</html>
