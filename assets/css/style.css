@@ -53,8 +53,16 @@ body {
 .banner-women-products,
 .banner-men-products,
 .banner-kids-products
-.banner-payment {
+.banner-payment 
+.banner-profile {
   min-height: 60vh;
+  background: -webkit-gradient(
+      linear,
+      left top, left bottom,
+      from(rgba(245, 121, 224, 0.5)),
+      to(rgba(255, 255, 255, 0.5))
+    ),
+    url("../images/women-page.jpg") center/cover fixed no-repeat;
   background: linear-gradient(
       rgba(245, 121, 224, 0.5),
       rgba(255, 255, 255, 0.5)
@@ -63,6 +71,13 @@ body {
 }
 .banner-men-products {
   min-height: 60vh;
+  background: -webkit-gradient(
+      linear,
+      left top, left bottom,
+      from(rgba(255, 255, 255, 0.5)),
+      to(rgba(255, 255, 255, 0.5))
+    ),
+    url("../images/men-page.jpg") center/cover fixed no-repeat;
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
@@ -71,6 +86,13 @@ body {
 }
 .banner-kids-products {
   min-height: 60vh;
+  background: -webkit-gradient(
+      linear,
+      left top, left bottom,
+      from(rgba(245, 121, 224, 0.5)),
+      to(rgba(255, 255, 255, 0.5))
+    ),
+    url("../images/kids-page.jpg") center/cover fixed no-repeat;
   background: linear-gradient(
       rgba(245, 121, 224, 0.5),
       rgba(255, 255, 255, 0.5)
@@ -79,11 +101,32 @@ body {
 }
 .banner-payment {
   min-height: 60vh;
+  background: -webkit-gradient(
+      linear,
+      left top, left bottom,
+      from(rgba(245, 121, 224, 0.5)),
+      to(rgba(255, 255, 255, 0.5))
+    ),
+    url("../images/payment.jpg") center/cover fixed no-repeat;
   background: linear-gradient(
       rgba(245, 121, 224, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
     url("../images/payment.jpg") center/cover fixed no-repeat;
+}
+.banner-profile {
+  min-height: 40vh;
+  background: -webkit-gradient(
+      linear,
+      left top, left bottom,
+      from(rgba(245, 121, 224, 0.5)),
+      to(rgba(255, 255, 255, 0.5))
+    ),;
+  background: linear-gradient(
+      rgba(245, 121, 224, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    /* url("../images/payment.jpg") center/cover fixed no-repeat; */
 }
 
 
@@ -360,7 +403,8 @@ body {
   -o-transition: all 0.3s linear;
   cursor: pointer;
   border: 0.1rem solid transparent;
-  box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
 }
 .single-product-photo:hover {
   border-color: var(--mainBlack); 
@@ -380,4 +424,105 @@ body {
 }
 .shipping-dark {
   background: linear-gradient(145deg, #575b5d, #252b2d);
+}
+
+/* ########################## dropdown menu ############################## */
+.cd-dropdown {
+  position: fixed;
+  z-index: 1;
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  height: 100%;
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+.cd-dropdown.dropdown-is-active {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+.cd-drown-content.is-hidden, .cd-dropdown-content ul.is-hidden {
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+}
+.cd-dropdown-content.move-out > li > a, .cd-dropdown-content ul.move-out > li > a {
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+
+@media only screen and (min-width: 1024px) {
+  .cd-dropdown {
+    position: absolute;
+    top: 100%;
+    /* reset style*/
+    height: auto;
+    width: auto;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s, -webkit-transform 0.3s 0s;
+  }
+  .cd-dropdown.dropdown-is-active {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;
+    transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;
+    transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;
+    transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s, -webkit-transform 0.3s 0s;
+  }
+
+  .cd-dropdown-content {
+    /* reset mobile style */
+    position: static;
+    height: auto;
+    width: 280px;
+  }
+  .cd-dropdown-content .cd-secondary-dropdown, .cd-dropdown-content .cd-dropdown-gallery, .cd-dropdown-content .cd-dropdown-icons {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    left: 100%;
+    height: auto;
+  }
+  .cd-dropdown-content .cd-secondary-dropdown.is-hidden, .cd-dropdown-content .cd-dropdown-gallery.is-hidden, .cd-dropdown-content .cd-dropdown-icons.is-hidden {
+    /* reset mobile style */
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .cd-dropdown-content > .has-children > ul {
+    visibility: hidden;
+  }
+  .cd-dropdown-content > .has-children:hover > ul {
+    /* when hover over .cd-dropdown-content items - show subnavigation */
+    visibility: visible;
+  }
+  .cd-dropdown-content > .has-children:hover > .cd-secondary-dropdown > li > ul {
+    /* if .cd-secondary-dropdown is visible - show also subnavigation */
+    visibility: visible;
+  }
 }
