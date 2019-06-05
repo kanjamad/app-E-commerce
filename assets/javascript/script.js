@@ -1,10 +1,10 @@
 console.log("Hi")
 
-var productsData;
+
+const $productsData = $('#productsTarget');
 
 $(document).ready(function(){
     // -------------------- products ---------------------
-    $productsData = $('#productsTarget');
     $.ajax({
         method: "GET",
         url: "https://kanjamadapishopping.herokuapp.com/api/products",
@@ -25,7 +25,7 @@ function getProductHtml(product){
                 <!-- <span class="featured-search-icon" 
                 data-toggle="modal" 
                 data-target="#productModal"><i class="fas fa-search"></i></span> -->
-                <button id="click-order" class="featured-store-link text-captilaze" data-id=${product.id}><i class="fas fa-shopping-cart"></i> add to cart </button>
+                <button class="featured-store-link text-captilaze click-order" data-id=${product._id}><i class="fas fa-shopping-cart"></i> add to cart </button>
             </div>
             <h6 class="text-capitalize text-center my-2">${product.productName}</h6>
             <h6 class="text-center"><span class="text-muted old-price mx-2">${product.oldPrice}</span><span>$${product.price}</span></h6>
@@ -58,7 +58,10 @@ function handleError(e){
 
 // ------------------------ get product to order ------------------
 
-$("#click-order").on("click", function(e) {
-    e.preventDefault();
-    console.log(" Yay!!!!!!!!!!........WOOOOHOOOOO I get to order stuff.......");
+$($productsData).on("click", function(e) {
+    // e.preventDefault();
+    if (e.target.classList.contains('click-order')) {
+        console.log(" Yay!!!!!!!!!!........WOOOOHOOOOO I get to order stuff.......");
+        console.log('Product ID = ', e.target.getAttribute('data-id'))
+    }
 });
