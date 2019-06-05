@@ -337,8 +337,7 @@
 <!-- end of footer -->
 
 
-    <!-- modal -->
-
+    <!-- modal sign in-->
     <div class="modal fade" id="login-signup" tabindex="-1" role="dialog">
         <div class="modal-dialog " role="document">
             <div class="modal-content pb-4 login-purple-pink">
@@ -385,7 +384,8 @@
                                     <div class="mt-5">
                                         <p class="text-white text-center">
                                             Don't have an account?
-                                            <a href="#" class="text-warning">Click here to register</a>
+                                            <a href="#" data-toggle="modal"
+                                            data-target="#signup-login" class="text-warning">Click here to register </a>
                                         </p>    
                                     </div>
                     
@@ -396,7 +396,76 @@
             </div>
         </div>
     </div>
-<!-- end of modal -->
+<!-- end of modal sign in-->
+
+    <!-- modal sign up-->
+    <div class="modal fade" id="signup-login" tabindex="-1" role="dialog">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content pb-4 login-purple-pink">
+                    <!-- modal header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title text-capitalize text-warning"> Ap Shopping</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span class="text-white" aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- end of modal header -->
+    
+                    <!-- signup card -->
+            <div class="col">
+                <div class="login-purple-pink p-3 shadow-lg-rounded">
+                    <div class="pt-3">
+                        <h2 class="text-white">
+                            Register
+                        </h2>
+                    </div>
+        
+                    <form class="mt-5">
+        
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm bg-light" name="fullName" placeholder="Full Name">
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-sm bg-light" name="email" placeholder="Email">
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="password"  class="form-control form-control-sm bg-light" name="password" placeholder="Password" >
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="password"  class="form-control form-control-sm bg-light" name="password2" placeholder="Confirm Password" >
+                        </div>
+        
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberCheckBox">
+                            <label for="rememberCheckBox" class="form-check-label text-light">I agree to the terms & conditions?</label>
+                        </div>
+        
+                        <div class="mt-5">
+                            <button class="btn btn-sm btn-light col">Sign Up</button>
+                        </div>
+        
+                        <div class="text-center mt-2">
+                            <a href="#" class="text-warning">Forgot Password</a>
+                        </div>
+        
+                        <div class="mt-5">
+                            <p class="text-white text-center">
+                                Already have an account?
+                                <a href="#" class="text-warning">Click here to Login</a>
+                            </p>    
+                        </div>
+        
+                    </form>
+                </div>
+            </div>
+        <!-- end of signup card -->
+                </div>
+            </div>
+        </div>
+<!-- end of modal sign up-->
 
 
     
