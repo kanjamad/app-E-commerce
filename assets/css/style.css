@@ -7,6 +7,7 @@
   --mainGrey: #9b9999;
   --TransGrey: rgba(0, 0, 0, 0.1);
   --mainPink: #ef7998;
+  --mainTransition: all 0.3s linear;
 }
 body {
   color: var(--mainBlack);
@@ -340,6 +341,12 @@ body {
   text-decoration: line-through;
 }
 
+.product-img {
+  display: block;
+  width: 100%;
+  min-height: 12rem;
+  transition: var(--mainTransition);
+}
 
 /*--------------------
       footer
