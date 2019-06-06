@@ -123,6 +123,25 @@ ___
   transform: translateX(0%);
 }
 ```
+
+
+![Store-Products](assets/images/readme/Store-Products.png "Store Products in Local Storage")
+
+```
+
+function handleSuccess(json){
+    console.log(json.data);
+    renderProduct(json.data);
+
+// --------- save product to localStorage ------------
+    const products = JSON.stringify(json.data);
+    localStorage.setItem('productOrder', products);
+    const productStoredOrder = localStorage.getItem('productOrder');
+    const productOrderObj = JSON.parse(productStoredOrder)
+    console.log(productOrderObj)
+};
+
+```
 ___
 
 ### CSS units for font-size: px | em | rem

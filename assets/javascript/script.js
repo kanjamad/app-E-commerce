@@ -94,9 +94,9 @@ function handleSuccess(json){
     renderProduct(json.data);
 
 // --------- save product to localStorage
-    const product = JSON.stringify(json.data);
-    localStorage.setItem('products', product);
-    const productStoredOrder = localStorage.getItem('products');
+    const products = JSON.stringify(json.data);
+    localStorage.setItem('productOrder', products);
+    const productStoredOrder = localStorage.getItem('productOrder');
     const productOrderObj = JSON.parse(productStoredOrder)
     console.log(productOrderObj)
 };
