@@ -2,6 +2,9 @@ console.log("Hi")
 
 
 const $productsData = $('#productsTarget');
+// cart
+let products = [];
+let cart = [];
 
 $(document).ready(function(){
     // -------------------- products ---------------------
@@ -91,30 +94,43 @@ function renderProduct(productsArr){
 
 function handleSuccess(json){
     console.log(json.data);
+    products = json.data;
     renderProduct(json.data);
 
-// --------- save product to localStorage
-    const products = JSON.stringify(json.data);
-    localStorage.setItem('productOrder', products);
-    const productStoredOrder = localStorage.getItem('productOrder');
-    const productOrderObj = JSON.parse(productStoredOrder)
-    console.log(productOrderObj)
-};
+// --------- save product to localStorage ---------------
+    // const products = JSON.stringify(json.data);
+    // localStorage.setItem('productOrder', products);
+    // const productStoredOrder = localStorage.getItem('productOrder');
+    // const productOrderObj = JSON.parse(productStoredOrder)
+    // console.log(productOrderObj)
+    
+// ----------get product id from localStorage -------------    
+    // result ={}
+    // for (var i =0; i< productOrderObj.lenght; i++){
+    //     result[productOrderObj[i].id] = productOrderObj[i];
+    // }
+    // console.log(result);
 
+};
 
 function handleError(e){
     console.log('uh oh');
     $('#productsTarget').text('Failed to load products, is the server working?');
 };
 
-// ------------------------ get product to order ------------------
+// ------------------------ Button get product to order ------------------
 
 $($productsData).on("click", function(e) {
     // e.preventDefault();
     if (e.target.classList.contains('click-order')) {
         console.log(" Yay!!!!!!!!!!........WOOOOHOOOOO I get to order stuff.......");
-        console.log('Product ID = ', e.target.getAttribute('data-id'))
+        console.log('ProductID = ', e.target.getAttribute('data-id'));
+        const product = products.filter(item => item._id === e.target.getAttribute('data-id'))[0]
+        console.log('Procuct clicked = ', product);
+        cart.push(product);
+        localStorage.setItem('productOrder', JSON.stringify(cart));
     }
+
 });
 
 // ----------------------- login ---------------------------
@@ -147,3 +163,15 @@ function signSuccess(res){
 function signError(err){
     console.log(`Error: ${err}`)
 }
+
+// ------------------------------------------------------- 
+
+
+// ----------------------- Add Product to the Cart---------------------------
+// get product from products *done
+// add product to the cart *done
+// save cart in localStorage *done
+// set cart values
+// display cart item
+// show the cart
+
