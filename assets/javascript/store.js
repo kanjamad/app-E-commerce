@@ -4,13 +4,6 @@ const $orderData = $('#ordersTarget');
 
 $(document).ready(function(){
     // -------------------- get orders from localStorage ---------------------
-    // $.ajax({
-    //     method: "GET",
-    //     // url: "localStorage.setItem('productOrder', JSON.stringify(cart))",
-    //     url: "JSON.stringify(cart)",
-    //     success: orderSuccess,
-    //     error: orderError,
-    // });
     const cart = JSON.parse(localStorage.getItem('productOrder'));
     console.log('Local Storage Cart = ', cart);
     renderOrder(cart)
@@ -36,6 +29,22 @@ function createProductTemplate(product){
             <p>${product.price}</p>
         </div>
         <!-- end of single column -->
+        <!-- single column -->
+        <div class="col-10 mx-auto col-md-2">
+            <!-- cart buttons -->
+            <div class="d-flex justify-content-center align-items-center">
+                <span class="btn btn-black mx-1">-</span>
+                <span class="btn btn-black mx-1">2</span>
+                <span class="btn btn-black mx-1">+</span>
+            </div>
+            <!-- end of cart buttons -->
+        </div>
+        <!-- end of single column -->
+            <!-- single column -->
+        <div class="col-10 mx-auto col-md-2">
+            <p>$42.00</p>
+        </div>
+        <!-- end of single column -->
     `
 };
 
@@ -50,11 +59,6 @@ function renderOrder(ordersArr){
     $orderData.append(ordersHtml);
 };
 
-// function orderSuccess(json){
-//     console.log(json.data);
-//     orders = json.data;
-//     renderOrder(json.data);
-// };
 
 function orderError(e){
     console.log('uh oh');
