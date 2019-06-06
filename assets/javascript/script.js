@@ -12,6 +12,50 @@ $(document).ready(function(){
         error: handleError
     });
 
+
+    // --------------------- login in ----------------------
+    $("#loginForm").on("submit", function(e) {
+        e.preventDefault();
+        console.log('SUBMITTING...')
+
+    $.ajax({
+        method: "POST",
+        url:"https://kanjamadapishopping.herokuapp.com/api/auth/login",
+        data: JSON.stringify({
+            email: $('#emailInput').val(),
+            password: $('#passwordInput').val(),
+            rememberMe: $('#rememberInput').prop('checked'),
+        }),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: loginSuccess,
+        error: loginError,
+        });
+    });
+
+    // --------------------- Sign UP ----------------------
+    $('#singupForm').on("submit", function(e) {
+        e.preventDefault();
+        console.log('signUp submit....')
+    
+        $.ajax({
+            method: "POST",
+            url: "https://kanjamadapishopping.herokuapp.com/api/auth/signup",
+            data: JSON.stringify({
+                fullName: $('#fullNameInput').val(),
+                email: $('#emailR').val(),
+                password: $('passwordR').val(),
+                password2: $('password2R').val(),
+                iAgree: $('#rememberCheckBox-iAgree').prop('checked'),
+            }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: signSuccess,
+            error: signError,
+        })
+
+    });
+
 });
 
 // ----------------------- products ------------------------
@@ -48,6 +92,13 @@ function renderProduct(productsArr){
 function handleSuccess(json){
     console.log(json.data);
     renderProduct(json.data);
+
+// --------- save product to localStorage
+    const products = JSON.stringify(json.data);
+    localStorage.setItem('productOrder', products);
+    const productStoredOrder = localStorage.getItem('productOrder');
+    const productOrderObj = JSON.parse(productStoredOrder)
+    console.log(productOrderObj)
 };
 
 
@@ -65,3 +116,34 @@ $($productsData).on("click", function(e) {
         console.log('Product ID = ', e.target.getAttribute('data-id'))
     }
 });
+
+// ----------------------- login ---------------------------
+
+function loginSuccess(res){
+    console.log(window);
+    console.log(window.location.pathname);
+    window.location.pathname = '/shipping.html';
+
+
+    // --------- save user to localStorage
+    const userOrder = JSON.stringify([{id: 'alsdfjaodskh98830', price: '10.00', name: 'Product One', images: 'http://someurl.com'}]);
+    localStorage.setItem('userorder', userOrder);
+    const userStoredOrder = localStorage.getItem('userorder');
+    const userOrderObj = JSON.parse(userStoredOrder)
+    console.log(userOrderObj)
+
+}
+function loginError(err){
+    console.log(`Error: ${err}`)
+}
+
+// ----------------------- sign Up---------------------------
+
+function signSuccess(res){
+    window.location.pathname = '/store.html';
+    console.log(res);
+}
+
+function signError(err){
+    console.log(`Error: ${err}`)
+}

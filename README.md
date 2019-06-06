@@ -123,6 +123,25 @@ ___
   transform: translateX(0%);
 }
 ```
+
+
+![Store-Products](assets/images/readme/Store-Products.png "Store Products in Local Storage")
+
+```
+
+function handleSuccess(json){
+    console.log(json.data);
+    renderProduct(json.data);
+
+// --------- save product to localStorage ------------
+    const products = JSON.stringify(json.data);
+    localStorage.setItem('productOrder', products);
+    const productStoredOrder = localStorage.getItem('productOrder');
+    const productOrderObj = JSON.parse(productStoredOrder)
+    console.log(productOrderObj)
+};
+
+```
 ___
 
 ### CSS units for font-size: px | em | rem
@@ -181,4 +200,6 @@ Wireframs for home page, order comfirmation form and my address page
 11. <a href="https://getbootstrap.com/docs/4.0/components/jumbotron/" target="_blank"> Bootstrap Jumbotron </a>
 12. <a href="https://codyhouse.co/gem/mega-dropdown" target="_blank"> mega-dropdown component </a>
 13. <a href="https://api.jquery.com/jquery.ajax/#jQuery-ajax-url-settings" target="_blank"> jQuery.ajax() </a>
+14. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank"> Window​.local​Storage </a>
+15. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/location" target="_blank"> Window​.location </a>
  

@@ -337,7 +337,7 @@
 <!-- end of footer -->
 
 
-    <!-- modal sign in-->
+    <!-- modal logIn-->
     <div class="modal fade" id="login-signup" tabindex="-1" role="dialog">
         <div class="modal-dialog " role="document">
             <div class="modal-content pb-4 login-purple-pink">
@@ -359,22 +359,22 @@
                                     </h2>
                                 </div>
                     
-                                <form class="mt-5">
+                                <form class="mt-5" id="loginForm">
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-sm bg-light" name="email" placeholder="Email">
+                                        <input id="emailInput" type="email" class="form-control form-control-sm bg-light" name="email" placeholder="Email">
                                     </div>
                     
                                     <div class="form-group">
-                                        <input type="password"  class="form-control form-control-sm bg-light" name="password" placeholder="Password" >
+                                        <input id="passwordInput" type="password"  class="form-control form-control-sm bg-light" name="password" placeholder="Password" >
                                     </div>
                     
                                     <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="rememberCheckBox">
-                                        <label for="rememberCheckBox" class="form-check-label text-light">Remember me?</label>
+                                        <input type="checkbox" class="form-check-input" id="rememberInput">
+                                        <label  for="rememberCheckBox" class="form-check-label text-light">Remember me?</label>
                                     </div>
                     
                                     <div class="mt-5">
-                                        <button class="btn btn-sm btn-light col">Login</button>
+                                        <button type="submit" class="btn btn-sm btn-light col" id="login">Login</button>
                                     </div>
                     
                                     <div class="text-center mt-2">
@@ -385,7 +385,7 @@
                                         <p class="text-white text-center">
                                             Don't have an account?
                                             <a href="#" data-toggle="modal"
-                                            data-target="#signup-login" class="text-warning">Click here to register </a>
+                                            data-target="#signup-login" class="text-warning" id="signup">Click here to register </a>
                                         </p>    
                                     </div>
                     
@@ -396,10 +396,10 @@
             </div>
         </div>
     </div>
-<!-- end of modal sign in-->
+<!-- end of modal logIn-->
 
     <!-- modal sign up-->
-    <div class="modal fade" id="signup-login" tabindex="-1" role="dialog">
+    <div class="modal fade" id="signup-login" tabindex="-1" role="dialog" >
             <div class="modal-dialog " role="document">
                 <div class="modal-content pb-4 login-purple-pink">
                     <!-- modal header -->
@@ -420,31 +420,31 @@
                         </h2>
                     </div>
         
-                    <form class="mt-5">
+                    <form class="mt-5" id="singupForm" >
         
                         <div class="form-group">
-                            <input type="text" class="form-control form-control-sm bg-light" name="fullName" placeholder="Full Name">
+                            <input id="fullNameInput" type="text" class="form-control form-control-sm bg-light" name="fullName" placeholder="Full Name">
                         </div>
         
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-sm bg-light" name="email" placeholder="Email">
+                            <input id="emailR" type="email" class="form-control form-control-sm bg-light" name="email" placeholder="Email">
                         </div>
         
                         <div class="form-group">
-                            <input type="password"  class="form-control form-control-sm bg-light" name="password" placeholder="Password" >
+                            <input id="passwordR" type="password"  class="form-control form-control-sm bg-light" name="password" placeholder="Password" >
                         </div>
         
                         <div class="form-group">
-                            <input type="password"  class="form-control form-control-sm bg-light" name="password2" placeholder="Confirm Password" >
+                            <input id="password2R" type="password"  class="form-control form-control-sm bg-light" name="password2" placeholder="Confirm Password" >
                         </div>
         
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="rememberCheckBox">
+                            <input type="checkbox" class="form-check-input" id="rememberCheckBox-iAgree">
                             <label for="rememberCheckBox" class="form-check-label text-light">I agree to the terms & conditions?</label>
                         </div>
         
                         <div class="mt-5">
-                            <button class="btn btn-sm btn-light col">Sign Up</button>
+                            <button  type="submit" class="btn btn-sm btn-light col" id="register">Sign Up</button>
                         </div>
         
                         <div class="text-center mt-2">
@@ -454,7 +454,7 @@
                         <div class="mt-5">
                             <p class="text-white text-center">
                                 Already have an account?
-                                <a href="#" data-dismiss="modal" aria-hidden="true" class="text-warning">Click here to Login</a>
+                                <a href="#" data-dismiss="modal" aria-hidden="true" class="text-warning" id="signin">Click here to Login</a>
                             </p>    
                         </div>
         
