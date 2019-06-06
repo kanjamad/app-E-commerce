@@ -4,9 +4,9 @@ const $orderData = $('#ordersTarget');
 
 $(document).ready(function(){
     // -------------------- get orders from localStorage ---------------------
-    const cart = JSON.parse(localStorage.getItem('productOrder'));
-    console.log('Local Storage Cart = ', cart);
-    renderOrder(cart)
+    const cartOrder = JSON.parse(localStorage.getItem('productOrder'));
+    console.log('Local Storage Cart = ', cartOrder);
+    renderOrder(cartOrder)
 
 });
 
