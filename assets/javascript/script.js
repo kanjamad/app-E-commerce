@@ -4,7 +4,7 @@ console.log("Hi")
 const $productsData = $('#productsTarget');
 // cart
 let products = [];
-let cart = [];
+// let cart = [];
 
 $(document).ready(function(){
     // -------------------- products ---------------------
@@ -47,8 +47,8 @@ $(document).ready(function(){
             data: JSON.stringify({
                 fullName: $('#fullNameInput').val(),
                 email: $('#emailR').val(),
-                password: $('passwordR').val(),
-                password2: $('password2R').val(),
+                password: $('#passwordR').val(),
+                password2: $('#password2R').val(),
                 iAgree: $('#rememberCheckBox-iAgree').prop('checked'),
             }),
             contentType: "application/json; charset=utf-8",
@@ -75,7 +75,7 @@ function getProductHtml(product){
                 <button class="featured-store-link text-captilaze click-order" data-id=${product._id}><i class="fas fa-shopping-cart"></i> add to cart </button>
             </div>
             <h6 class="text-capitalize text-center my-2">${product.productName}</h6>
-            <h6 class="text-center"><span class="text-muted old-price mx-2">${product.oldPrice}</span><span>$${product.price}</span></h6>
+            <h6 class="text-center"><span class="text-muted old-price mx-2">${product.oldPrice}</span><span>${product.price}</span></h6>
         </div>
         <!-- end single product -->
     `
@@ -123,10 +123,13 @@ function handleError(e){
 $($productsData).on("click", function(e) {
     // e.preventDefault();
     if (e.target.classList.contains('click-order')) {
-        console.log(" Yay!!!!!!!!!!........WOOOOHOOOOO I get to order stuff.......");
-        console.log('ProductID = ', e.target.getAttribute('data-id'));
-        const product = products.filter(item => item._id === e.target.getAttribute('data-id'))[0]
-        console.log('Procuct clicked = ', product);
+        let cart;
+        if (localStorage.getItem('productOrder')) {
+            cart = JSON.parse(localStorage.getItem('productOrder'));
+        } else {
+            cart = [];
+        }
+        const product = products.filter(item => item._id === e.target.getAttribute('data-id'))[0];
         cart.push(product);
         localStorage.setItem('productOrder', JSON.stringify(cart));
     }
