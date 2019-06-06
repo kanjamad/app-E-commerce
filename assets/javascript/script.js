@@ -92,6 +92,13 @@ function renderProduct(productsArr){
 function handleSuccess(json){
     console.log(json.data);
     renderProduct(json.data);
+
+// --------- save product to localStorage
+    const product = JSON.stringify(json.data);
+    localStorage.setItem('products', product);
+    const productStoredOrder = localStorage.getItem('products');
+    const productOrderObj = JSON.parse(productStoredOrder)
+    console.log(productOrderObj)
 };
 
 
