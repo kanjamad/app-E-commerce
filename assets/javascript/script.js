@@ -12,8 +12,8 @@ $(document).ready(function(){
         error: handleError
     });
 
-    // --------------------- login in ----------------------
 
+    // --------------------- login in ----------------------
     $("#loginForm").on("submit", function(e) {
         e.preventDefault();
         console.log('SUBMITTING...')
@@ -31,6 +31,28 @@ $(document).ready(function(){
         success: loginSuccess,
         error: loginError,
         });
+    });
+
+    // --------------------- Sign UP ----------------------
+    $('#singupForm').on("submit", function(e) {
+        e.preventDefault();
+        console.log('signUp submit....')
+    
+        $.ajax({
+            method: "POST",
+            url: "https://kanjamadapishopping.herokuapp.com/api/auth/signup",
+            data: JSON.stringify({
+                fullName: $('#fullNameInput').val(),
+                email: $('#emailR').val(),
+                password: $('passwordR').val(),
+                password2: $('password2R').val(),
+                iAgree: $('#rememberCheckBox-iAgree').prop('checked'),
+            }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: signSuccess,
+            error: signError,
+        })
 
     });
 
@@ -108,3 +130,13 @@ function loginError(err){
     console.log(`Error: ${err}`)
 }
 
+// ----------------------- sign Up---------------------------
+
+function signSuccess(res){
+    window.location.pathname = '/store.html';
+    console.log(res);
+}
+
+function signError(err){
+    console.log(`Error: ${err}`)
+}

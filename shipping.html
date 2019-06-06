@@ -20,7 +20,65 @@
 <body>
 
 
-    <div class="col-10 mx-auto col-md-6 col-lg-6 my-5">
+
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="company logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="women.html">Women</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="men.html">Men</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="kids.html">Kids</a>
+                </li>
+                <li class="nav-item mx-2 nav-active">
+                    <a class="nav-link" href="store.html">order</a>
+                </li>
+            </ul>
+        </div>
+            <div class="navbar-icons d-none d-lg-flex">
+                <!-- single icon -->
+                <div class="navbar-icon mx-2"><i class="fas fa-headset"></i></div>
+                <!-- end of single icon -->
+                <!-- single icon -->
+                <div class="navbar-icon mx-2"><i class="fas fa-search"></i></div>
+                <!-- end of single icon -->
+                <!-- single icon -->
+                <div class="navbar-icon mx-2"><i class="fas fa-user"></i></div>
+                <!-- end of single icon -->
+                <!-- single icon -->
+                <a href="store.html" class="navbar-icon mx-2 navbar-cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="cart-items">3</div>
+                    <!-- <span class="cart-items" >3</span> -->
+                </a>
+                <!-- end of single icon -->
+        </div>
+        </nav>
+        <!-- end of navbar -->
+        <div class="banner-shipping d-flex align-items-center justify-content-center pl-3 pl-lg-5 text-center">
+            <div>
+                <h1 class="text-capitalize text-yellow text-slanted display">ap shopping</h1>
+                <h1 class="text-capitalize font-weight-bold display-4">Order confirmation</h1>
+            </div>
+        </div>
+</header>
+<!-- end of header -->
+
+
+
+
+    <div class="row home-filler align-items-end pb-5">
+    <!-- shipping form -->
+    <div class="col-10 mx-auto col-md-6 col-lg-5 my-5">
         <div class="shipping-dark p-3 shadow-lg-rounded">
             <div class="pt-3">
                 <h2 class="text-white">
@@ -171,9 +229,8 @@
             </form>
         </div>
     </div>
-
-
-    
+    <!--  end of shipping form -->  
+    </div>
 
     <!-- bootstap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
