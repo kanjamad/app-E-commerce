@@ -49,6 +49,7 @@ $(document).ready(function(){
                 email: $('#emailR').val(),
                 password: $('#passwordR').val(),
                 password2: $('#password2R').val(),
+                gender: $('#genderR').val(),
                 iAgree: $('#rememberCheckBox-iAgree').prop('checked'),
             }),
             contentType: "application/json; charset=utf-8",
@@ -132,6 +133,7 @@ $($productsData).on("click", function(e) {
 function loginSuccess(res){
     console.log(window);
     console.log(window.location.pathname);
+    console.log(res)
     window.location.pathname = '/shipping.html';
 
 

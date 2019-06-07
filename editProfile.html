@@ -67,11 +67,74 @@
         <div class="banner-shipping d-flex align-items-center justify-content-center pl-3 pl-lg-5 text-center">
             <div>
                 <h1 class="text-capitalize text-yellow text-slanted display">ap shopping</h1>
-                <h1 class="text-capitalize font-weight-bold display-4"> testing page</h1>
             </div>
         </div>
 </header>
 <!-- end of header -->
+
+
+<!-- update -->
+
+<div class="row home-filler align-items-end pb-5">
+    <!-- shipping form -->
+    <div class="col-10 mx-auto col-md-6 col-lg-5 my-5">
+        <div class="login-purple-pink p-3 shadow-lg-rounded">
+            <div class="pt-3">
+                <h2 class="text-white">
+                    Update Profile
+                </h2>
+            </div>
+
+            <!-- update form -->
+            <form class="mt-5" id="profileForm" >
+    
+                <div class="form-group">
+                    <input id="userFullName" type="text" class="form-control form-control-sm bg-light" name="fullName" placeholder="Full Name">
+                </div>
+
+                <div class="form-group">
+                    <input id="userEmail" type="email" class="form-control form-control-sm bg-light" name="email" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                    <input id="userPassword" type="password"  class="form-control form-control-sm bg-light" name="password" placeholder="Password" >
+                </div>
+
+                <div class="form-group">
+                    <input id="userPassword2" type="password"  class="form-control form-control-sm bg-light" name="password2" placeholder="Confirm Password" >
+                </div>
+
+                <div class="form-group">
+                
+                    <select class="form-control form-control-sm bg-light" for="gender"  name="gender" id="gender">
+                            <option value="">Your gender</option>
+                            <option value="F">Female</option>
+                            <option value="M">Male</option>
+                        </select>
+                </div>
+
+                <div class="mt-5">
+                    <button  type="submit" class="btn btn-sm btn-light col" id="updateProfile">Save</button>
+                </div>
+
+                <div class="mt-5">
+                    <p class="text-white text-center">
+                        Want to shopping more?
+                        <a href="index.html" data-dismiss="modal" aria-hidden="true" class="text-warning">Continue Shopping</a>
+                    </p>    
+                </div>
+
+            </form>
+            <!-- end of update form -->
+
+        </div>
+    </div>
+    <!--  end of shipping form -->  
+    </div>
+
+<!-- end of update -->
+
+
 
 
 
@@ -107,75 +170,6 @@
     </div>
 <!-- end of profile -->
 
-
-    <!-- modal edit profile form-->
-    <div class="modal fade home-filler" id="editProfile" tabindex="-1" role="dialog" >
-        <div class="modal-dialog " role="document">
-            <div class="modal-content pb-4 login-purple-pink">
-                <!-- modal header -->
-                <div class="modal-header">
-                    <h5 class="modal-title text-capitalize text-warning"> Ap Shopping</h5>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span class="text-white" aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <!-- end of modal header -->
-
-                <!-- profile card -->
-        <div class="col">
-            <div class="login-purple-pink p-3 shadow-lg-rounded" >
-                <div class="pt-3">
-                    <h2 class="text-white">
-                        Profile
-                    </h2>
-                </div>
-    
-                <form class="mt-5" id="profileForm" >
-    
-                    <div class="form-group">
-                        <input id="userFullName" type="text" class="form-control form-control-sm bg-light" name="fullName" placeholder="Full Name">
-                    </div>
-    
-                    <div class="form-group">
-                        <input id="userEmail" type="email" class="form-control form-control-sm bg-light" name="email" placeholder="Email">
-                    </div>
-    
-                    <div class="form-group">
-                        <input id="userPassword" type="password"  class="form-control form-control-sm bg-light" name="password" placeholder="Password" >
-                    </div>
-    
-                    <div class="form-group">
-                        <input id="userPassword2" type="password"  class="form-control form-control-sm bg-light" name="password2" placeholder="Confirm Password" >
-                    </div>
-
-                    <div class="form-group">
-                    
-                        <select class="form-control form-control-sm bg-light" for="gender"  name="gender" id="gender">
-                                <option value="">Your gender</option>
-                                <option value="F">Female</option>
-                                <option value="M">Male</option>
-                            </select>
-                    </div>
-    
-                    <div class="mt-5">
-                        <button  type="submit" class="btn btn-sm btn-light col" id="updateProfile">Save</button>
-                    </div>
-    
-                    <div class="mt-5">
-                        <p class="text-white text-center">
-                            Want to shopping more?
-                            <a href="index.html" data-dismiss="modal" aria-hidden="true" class="text-warning">Continue Shopping</a>
-                        </p>    
-                    </div>
-    
-                </form>
-            </div>
-        </div>
-    <!-- end of profile card -->
-            </div>
-        </div>
-    </div>
-<!-- end of edit profile form-->
 
 
     <!-- modal search-->
@@ -282,6 +276,7 @@
         </div>
     </div>
 <!-- end of modal contact-->
+
 
 
 
