@@ -5,6 +5,7 @@ console.log("Hi")
 let products = [];
 const $orderData = $('#ordersTarget');
 const $productsData = $('#productsTarget');
+
 let cart;
 if (localStorage.getItem('productOrder')) {
     cart = JSON.parse(localStorage.getItem('productOrder'));
@@ -74,6 +75,34 @@ $(document).ready(function(){
 
 });
 
+// -------------------- end of document.ready -------------
+
+// ----------------------- login ---------------------------
+
+function loginSuccess(res){
+    console.log(window);
+    console.log(window.location.pathname);
+    alert(JSON.stringify(res))
+    localStorage.setItem('ap_user', res.session.currentUser.id);
+    window.location.pathname = '/shipping.html';
+
+}
+function loginError(err){
+    console.log(`Error: ${err}`)
+}
+
+// ----------------------- sign Up---------------------------
+
+function signSuccess(res){
+    window.location.pathname = '/store.html';
+    console.log(res);
+}
+
+function signError(err){
+    console.log(`Error: ${err}`)
+}
+
+
 // ----------------------- products ------------------------
 
 function getProductHtml(product){
@@ -138,14 +167,15 @@ $($productsData).on("click", function(e) {
 // ----------------------- Update Product Quantity -----------------------
 
 $($orderData).on("click", function(e){
+
     // (+)
     if (e.target.classList.contains("addOrder")) {
         console.log('ADD ORDER');
         let id = e.target.getAttribute('data-id');
         console.log(id);
         let tempProduct = cart.find(product => product._id === id);
-        tempProduct.amount = tempProduct.amount ? tempProduct.amount + 1 : tempProduct.amount = 1;
-        tempProduct.price = tempProduct.amount * tempProduct.price;
+        tempProduct.amount = tempProduct.amount ? tempProduct.amount + 1 : tempProduct.amount = 2;
+        // tempProduct.price = tempProduct.amount * tempProduct.price;
         localStorage.setItem('productOrder', JSON.stringify(cart));
         renderOrder(cart);
     // (-)
@@ -154,10 +184,13 @@ $($orderData).on("click", function(e){
         let id = e.target.getAttribute('data-id');
         console.log(id);
         let tempProduct = cart.find(product => product._id === id);
-        tempProduct.amount = tempProduct.amount ? tempProduct.amount -1 : tempProduct.amount = 1;
-        tempProduct.price = tempProduct.amount * tempProduct.price;
-        localStorage.setItem('productsOrder', JSON.stringify(cart));
-        renderOrder(cart);
+        if (tempProduct.amount > 1) {
+            tempProduct.amount = tempProduct.amount ? tempProduct.amount -1 : tempProduct.amount = 1;
+            // tempProduct.price = tempProduct.price / tempProduct.amount;
+            localStorage.setItem('productOrder', JSON.stringify(cart));
+            renderOrder(cart);
+        }
+
         // let _id = lowerTotal.dataset._id;
         // let tempProduct = cart.find(product => product._id === _id);
         // tempProduct.total = tempProduct.total - 1;
@@ -168,29 +201,6 @@ $($orderData).on("click", function(e){
     }
 });
 
-// ----------------------- login ---------------------------
-
-function loginSuccess(res){
-    console.log(window);
-    console.log(window.location.pathname);
-    console.log(res)
-    window.location.pathname = '/shipping.html';
-
-}
-function loginError(err){
-    console.log(`Error: ${err}`)
-}
-
-// ----------------------- sign Up---------------------------
-
-function signSuccess(res){
-    window.location.pathname = '/store.html';
-    console.log(res);
-}
-
-function signError(err){
-    console.log(`Error: ${err}`)
-}
 
 // ----------------------- Add to the Cart---------------------------
 // -------- order ------
@@ -236,9 +246,21 @@ function getAllProductLocalHtml(orders){
 };
 
 function renderOrder(ordersArr){
+    const $cartTotal = $('#cart-total');
+    const $pricePay = $('#price-pay');
     $orderData.empty();
     const ordersHtml = getAllProductLocalHtml(ordersArr);
     $orderData.append(ordersHtml);
+    let total = 0.00;
+    let finalPay = 0.00;
+    cart.forEach(item => {
+        const amount = item.amount || 1;
+        total += item.price * amount;
+    });
+
+    $cartTotal.text(`$${total}`);
+
+    
 };
 
 
@@ -259,19 +281,19 @@ function orderError(e){
 
 
 // check money
-function showTotals(){
-    const total = [];
-    const products = document.querySelectorAll(".product-price");
-    products.forEach(function(cart){
-        total.push(parseFloat(item.textContent));
-    });
-    const totalMoney = tatal.reduce(function(total, cart){
-        total += cart;
-        return total;
-    },0);
-    const finalMoney = tatalMoney.toFixed(2);
+// function showTotals(){
+//     const total = [];
+//     const products = document.querySelectorAll(".priceTotal");
+//     products.forEach(function(cart){
+//         total.push(parseFloat(item.textContent));
+//     });
+//     const totalMoney = total.reduce(function(total, cart){
+//         total += cart;
+//         return total;
+//     },0);
+//     const finalMoney = tatalMoney.toFixed(2);
 
-    document.getElementById("cart-total").textContent = finalMoney;
-    document.getElementsByClassName("cart-items").textContent = total.length;
+//     document.getElementById("cart-total").textContent = finalMoney;
+//     document.getElementsByClassName("cart-items").textContent = total.length;
 
-}
+// }

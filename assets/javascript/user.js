@@ -1,12 +1,15 @@
 console.log("Hi i'm user")
 
 const $userData = $('#userTarget');
+const $userProfileForm = $('#profileForm');
 
 $(document).ready(function(){
     // -------------------- Get User ---------------------
+    const userId = localStorage.getItem('ap_user');
+    console.log('USERID = ', userId);
     $.ajax({
         method: "GET",
-        url: "https://kanjamadapishopping.herokuapp.com/api/users",
+        url: `https://kanjamadapishopping.herokuapp.com/api/users/${userId}`,
         success: userSuccess,
         error: userError
     });
@@ -15,11 +18,11 @@ $(document).ready(function(){
     // --------------------- Update User ----------------------
     $("#profileForm").on("submit", function(e) {
         e.preventDefault();
-        console.log('Edit form ...')
+        console.log('Edit form ...', $userProfileForm.serialize());
 
     $.ajax({
-        method: "POST",
-        url:"https://kanjamadapishopping.herokuapp.com/api/users",
+        method: "PUT",
+        url:`https://kanjamadapishopping.herokuapp.com/api/users/${userId}`,
         data: JSON.stringify({
             fullName: $('#userFullName').val(),
             email: $('#userEmail').val(),
@@ -68,33 +71,81 @@ function getUserHtml(user){
     `
 };
 
-function getAllUserHtml(user){
-    // console.log(user)
-    return user.map(getUserHtml).join("");
+function getProfileFormHtml(user){
+    return `
+    <div class="form-group">
+        <input id="userFullName" type="text" class="form-control form-control-sm bg-light" name="fullName" value="${user.fullName}" placeholder="Full Name">
+    </div>
+
+    <div class="form-group">
+        <input id="userEmail" type="email" class="form-control form-control-sm bg-light" name="email" value="${user.email}" placeholder="Email">
+    </div>
+
+    <div class="form-group">
+        <input id="userPassword" type="password"  class="form-control form-control-sm bg-light" name="password" value="${user.password}" placeholder="Enter New Password" >
+    </div>
+
+    <div class="form-group">
+        <input id="userPassword2" type="password"  class="form-control form-control-sm bg-light" name="password2" value="" placeholder="Confirm Password" >
+    </div>
+
+    <div class="form-group">
+
+        <select class="form-control form-control-sm bg-light" for="gender"  name="gender" id="gender">
+                <option value="">Your gender</option>
+                <option ${user.gender === "Female" ? 'selected' : null} value="F">Female</option>
+                <option ${user.gender === "Male" ? 'selected' : null} value="M">Male</option>
+            </select>
+    </div>
+
+    <div class="mt-5">
+        <button  type="submit" class="btn btn-sm btn-light col" id="updateProfile">Save</button>
+    </div>
+
+    <div class="mt-5">
+        <p class="text-white text-center">
+            Want to shopping more?
+            <a href="index.html" data-dismiss="modal" aria-hidden="true" class="text-warning">Continue Shopping</a>
+        </p>    
+    </div>
+    `;
 };
+
+// function getAllUserHtml(user){
+//     // console.log(user)
+//     return user.map(getUserHtml).join("");
+// };
 
 function renderUser(userArr){
     $userData.empty();
-    const userHtml = getAllUserHtml(userArr);
+    const userHtml = getUserHtml(userArr);
     $userData.append(userHtml);
+};
+
+function renderProfileForm(userObj){
+    $userProfileForm.empty();
+    const profileFormHtml = getProfileFormHtml(userObj);
+    $userProfileForm.append(profileFormHtml);
 };
 
 function userSuccess(json){
     console.log(json.data);
     user = json.data;
     renderUser(json.data);
+    renderProfileForm(json.data);
 
         // --------- save user to localStorage ------------------
-    const userOrder = JSON.stringify(json.data);
-    localStorage.setItem('userData', userOrder);
-    const userStoredOrder = localStorage.getItem('userData');
-    const userOrderObj = JSON.parse(userStoredOrder)
+    // const userOrder = JSON.stringify(json.data);
+    // localStorage.setItem('userData', userOrder);
+    // const userStoredOrder = localStorage.getItem('userData');
+    // const userOrderObj = JSON.parse(userStoredOrder)
     // console.log(userOrderObj)
 
 };
 
+
 function userError(e){
-    console.log('uh oh');
+    console.log('uh oh', e);
     $('#userTarget').text('Failed to load User, is the server working?');
 };
 
