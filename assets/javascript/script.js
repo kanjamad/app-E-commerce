@@ -251,11 +251,14 @@ function renderOrder(ordersArr){
     });
     $cartTotal.text(`$${total}`);
 
-    cart.forEach(pay => {
-        const totalAmount = pay.totalAmount || 1;
-        finalPay +=  pay.price * totalAmount;
-    });
-    $pricePay.text(`$${finalPay}`);
+    // cart.forEach(pay => {
+    //     const totalAmount = pay.totalAmount || 1;
+    //     finalPay +=  pay.price * totalAmount;
+    // });
+    // $pricePay.text(`$${finalPay}`);
+    totalAmount = total + finalPay
+    $pricePay.text(`$${totalAmount}`);
+
 
     
 };
