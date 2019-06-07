@@ -44,14 +44,14 @@
             </div>
                 <div class="navbar-icons d-none d-lg-flex">
                     <!-- single icon -->
-                    <div class="navbar-icon mx-2"><i class="fas fa-headset"></i></div>
-                    <!-- end of single icon -->
-                    <!-- single icon -->
-                    <div class="navbar-icon mx-2"><i class="fas fa-search"></i></div>
-                    <!-- end of single icon -->
-                    <!-- single icon -->
-                    <div class="navbar-icon mx-2"><i class="fas fa-user"></i></div>
-                    <!-- end of single icon -->
+                <div class="navbar-icon mx-2" data-toggle="modal" data-target="#contact" ><i class="fas fa-headset"></i></div>
+                <!-- end of single icon -->
+                <!-- single icon -->
+                <div class="navbar-icon mx-2" data-toggle="modal" data-target="#search"><i class="fas fa-search"></i></div>
+                <!-- end of single icon -->
+                <!-- single icon -->
+                <div class="navbar-icon mx-2" data-toggle="modal" data-target="#profile"><i class="fas fa-user"></i></div>
+                <!-- end of single icon -->
                     <!-- single icon -->
                     <a href="store.html" class="navbar-icon mx-2 navbar-cart-icon">
                         <i class="fas fa-shopping-cart"></i>
@@ -354,6 +354,150 @@
         </div>
     </footer>
 <!-- end of footer -->
+
+
+
+<!-- modal -->
+
+    <!-- modal  profile -->
+    <div class="modal fade home-filler" id="profile" tabindex="-1" role="dialog" >
+            <div class="modal-dialog " role="document">
+                <div class="modal-content pb-4 login-purple-pink">
+                    <!-- modal header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title text-capitalize text-warning"> Ap Shopping</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span class="text-white" aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- end of modal header -->
+    
+                    <!-- profile card -->
+            <div class="col">
+                <div class="login-purple-pink p-3 shadow-lg-rounded" id="userTarget" >
+                    <div class="pt-3">
+                        <h2 class="text-white">
+                            Profile
+                        </h2>
+                    </div>
+        
+                        <!-- GET profile from API -->
+            
+                </div>
+            </div>
+        <!-- end of profile card -->
+                </div>
+            </div>
+        </div>
+    <!-- end of profile -->
+    
+    
+    
+        <!-- modal search-->
+        <div class="modal fade home-filler" id="search" tabindex="-1" role="dialog" >
+            <div class="modal-dialog " role="document">
+                <div class="modal-content pb-4 login-purple-pink">
+                    <!-- modal header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title text-capitalize text-warning"> Ap Shopping</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span class="text-white" aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- end of modal header -->
+    
+                    <!-- search card -->
+            <div class="col">
+                <div class="login-purple-pink p-3 shadow-lg-rounded">
+                    <div class="pt-3">
+                        <h2 class="text-white">
+                            Search
+                        </h2>
+                    </div>
+        
+                    <form class="mt-5" >
+        
+                        <div class="form-group">
+                            <input  type="text" class="form-control form-control-sm bg-light" name="search" placeholder="Search">
+                        </div>
+        
+                        <div class="mt-5">
+                            <button  type="submit" class="btn btn-sm btn-light col-3 float-right ">Go</button>
+                        </div>
+        
+                        <div class="mt-5">
+                            <p class="text-white text-center">
+                                want to shopping more?
+                                <a href="index.html" data-dismiss="modal" aria-hidden="true" class="text-warning" >Continue Shopping</a>
+                            </p>    
+                        </div>
+        
+                    </form>
+                </div>
+            </div>
+        <!-- end of search card -->
+                </div>
+            </div>
+        </div>
+    <!-- end of modal search-->
+    
+    
+        <!-- modal contact-->
+        <div class="modal fade home-filler" id="contact" tabindex="-1" role="dialog" >
+            <div class="modal-dialog " role="document">
+                <div class="modal-content pb-4 shipping-dark">
+                    <!-- modal header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title text-capitalize text-warning"> Ap Shopping</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span class="text-white" aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- end of modal header -->
+    
+                    <!-- contact card -->
+            <div class="col">
+                <div class="shipping-dark p-3 shadow-lg-rounded">
+                    <div class="pt-3">
+                        <h2 class="text-white">
+                            contact
+                        </h2>
+                    </div>
+        
+                    <form class="mt-5"  >
+        
+                        <div class="form-group">
+                            <input  type="text" class="form-control form-control-sm bg-light" name="name" placeholder="Name">
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-sm bg-light" name="email" placeholder="Email">
+                        </div>
+        
+                        <div class="form-group">
+                            <textarea rows="5" class="form-control form-control-sm bg-light" name="message" placeholder="Messages" ></textarea>
+                        </div>
+        
+                        <div class="mt-5">
+                            <button  type="submit" class="btn btn-sm btn-light col" id="contact">Submit</button>
+                        </div>
+        
+                        <div class="mt-5">
+                            <p class="text-white text-center">
+                                Want to shopping more?
+                                <a href="index.html" data-dismiss="modal" aria-hidden="true" class="text-warning" >Continue Shopping</a>
+                            </p>    
+                        </div>
+        
+                    </form>
+                </div>
+            </div>
+        <!-- end of contact card -->
+                </div>
+            </div>
+        </div>
+    <!-- end of modal contact-->
+<!-- end of modal -->
 
     
 
