@@ -1,9 +1,8 @@
 console.log("Hi")
 
 
-// cart
+
 let products = [];
-// let cart = [];
 const $orderData = $('#ordersTarget');
 const $productsData = $('#productsTarget');
 
@@ -136,12 +135,12 @@ function loginSuccess(res){
     window.location.pathname = '/shipping.html';
 
 
-    // --------- save user to localStorage
-    const userOrder = JSON.stringify([{id: 'alsdfjaodskh98830', price: '10.00', name: 'Product One', images: 'http://someurl.com'}]);
-    localStorage.setItem('userorder', userOrder);
-    const userStoredOrder = localStorage.getItem('userorder');
-    const userOrderObj = JSON.parse(userStoredOrder)
-    console.log(userOrderObj)
+    // --------- save user to localStorage ------------------
+    // const userOrder = JSON.stringify(res.data);
+    // localStorage.setItem('userorder', userOrder);
+    // const userStoredOrder = localStorage.getItem('userorder');
+    // const userOrderObj = JSON.parse(userStoredOrder)
+    // console.log(userOrderObj)
 
 }
 function loginError(err){
@@ -159,19 +158,8 @@ function signError(err){
     console.log(`Error: ${err}`)
 }
 
-// ------------------------------------------------------- 
-
-
-// ----------------------- Add Product to the Cart---------------------------
-// get product from products *done
-// add product to the cart *done
-// save cart in localStorage *done
-// set cart values
-// display cart item
-// show the cart
-
-// ----------------------- orders ------------------------
-
+// ----------------------- Add to the Cart---------------------------
+// -------- order ------
 function createProductTemplate(product){
     return `
         <!-- single column -->
@@ -193,16 +181,16 @@ function createProductTemplate(product){
         <div class="col-10 mx-auto col-md-2">
             <!-- cart buttons -->
             <div class="d-flex justify-content-center align-items-center">
-                <span class="btn btn-black mx-1">-</span>
+                <span class="btn btn-black mx-1 removeOrder"  >-</span>
                 <span class="btn btn-black mx-1">2</span>
-                <span class="btn btn-black mx-1">+</span>
+                <span class="btn btn-black mx-1 addOrder"  >+</span>
             </div>
             <!-- end of cart buttons -->
         </div>
         <!-- end of single column -->
             <!-- single column -->
         <div class="col-10 mx-auto col-md-2">
-            <p>$42.00</p>
+            <p >$42.00</p>
         </div>
         <!-- end of single column -->
     `
@@ -224,4 +212,36 @@ function orderError(e){
     console.log('uh oh');
     $('#ordersTarget').text('Failed to load orders, is the server working?');
 };
+
+// --------------------- Cart fanctionality -----------------
+
+// $($orderData).on("click", function(e){
+//     if (e.target.classList.contains("addOrder")) {
+//         let order;
+//         if (localStorage.getItem('productOrder')) {
+//             order = JSON.parse(localStorage.getItem('productOrder'));
+//         } else {
+//             order = [];
+//         }
+//         const tempProduct = products.filter(item => item._id === e.target.getAttribute('data-id'))[0];
+//         tempProduct +1;
+//         order.push(tempProduct);
+//         localStorage.setItem('productOrder', JSON.stringify(order));
+//     } else if (e.target.classList.contains("removeOrder")) {
+//             let order;
+//         if (localStorage.getItem('productOrder')) {
+//             order = JSON.parse(localStorage.getItem('productOrder'));
+//         } else {
+//             order = [];
+//         }
+//         const tempProduct = products.filter(item => item._id === e.target.getAttribute('data-id'))[0];
+//         tempProduct -1;
+//         order.push(tempProduct);
+//         localStorage.setItem('productOrder', JSON.stringify(order));
+        
+
+//     }
+// });
+
+
 
