@@ -54,7 +54,7 @@ function getUserHtml(user){
     </div>
 
     <div class="mt-5">
-        <button  type="submit" class="btn btn-sm btn-light col" data-toggle="modal" data-target="#editProfile" id="edit">Edit</button>
+        <button  type="submit" class="btn btn-sm btn-light col" id="edit">Edit</button>
     </div>
 
     <div class="mt-5">
@@ -84,6 +84,13 @@ function userSuccess(json){
     user = json.data;
     renderUser(json.data);
 
+        // --------- save user to localStorage ------------------
+    const userOrder = JSON.stringify(json.data);
+    localStorage.setItem('userData', userOrder);
+    const userStoredOrder = localStorage.getItem('userData');
+    const userOrderObj = JSON.parse(userStoredOrder)
+    // console.log(userOrderObj)
+
 };
 
 function userError(e){
@@ -94,7 +101,7 @@ function userError(e){
 // ----------------------- Update User---------------------------
 
 function updateSuccess(res){
-    console.log(window);
+    console.log(res);
     console.log(window.location.pathname);
     // window.location.pathname = '/index.html';
         // success page pop up!!

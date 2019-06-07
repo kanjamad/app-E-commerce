@@ -5,8 +5,15 @@ console.log("Hi")
 let products = [];
 const $orderData = $('#ordersTarget');
 const $productsData = $('#productsTarget');
+let cart;
+if (localStorage.getItem('productOrder')) {
+    cart = JSON.parse(localStorage.getItem('productOrder'));
+} else {
+    cart = [];
+}
 
 $(document).ready(function(){
+
     // -------------------- products ---------------------
     $.ajax({
         method: "GET",
@@ -81,7 +88,7 @@ function getProductHtml(product){
                 <button class="featured-store-link text-captilaze click-order" data-id=${product._id}><i class="fas fa-shopping-cart"></i> add to cart </button>
             </div>
             <h6 class="text-capitalize text-center my-2">${product.productName}</h6>
-            <h6 class="text-center"><span class="text-muted old-price mx-2">${product.oldPrice}</span><span>${product.price}</span></h6>
+            <h6 class="text-center"><span class="text-muted old-price mx-2">${product.oldPrice}</span><span class"product-price">${product.price}</span></h6>
         </div>
         <!-- end single product -->
     `
@@ -115,17 +122,45 @@ function handleError(e){
 $($productsData).on("click", function(e) {
     // e.preventDefault();
     if (e.target.classList.contains('click-order')) {
-        let cart;
-        if (localStorage.getItem('productOrder')) {
-            cart = JSON.parse(localStorage.getItem('productOrder'));
-        } else {
-            cart = [];
-        }
+        // let cart;
+        // if (localStorage.getItem('productOrder')) {
+        //     cart = JSON.parse(localStorage.getItem('productOrder'));
+        // } else {
+        //     cart = [];
+        // }
         const product = products.filter(item => item._id === e.target.getAttribute('data-id'))[0];
         cart.push(product);
         localStorage.setItem('productOrder', JSON.stringify(cart));
     }
+});
 
+
+// ----------------------- Update Product Quantity -----------------------
+
+$($orderData).on("click", function(e){
+    // (+)
+    if (e.target.classList.contains("addOrder")) {
+        console.log('ADD ORDER');
+        // let addTotal = e.target;
+        let id = e.target.getAttribute('data-id');
+        console.log(id);
+        let tempProduct = cart.find(product => product._id === id);
+        tempProduct.amount = tempProduct.amount ? tempProduct.amount + 1 : tempProduct.amount = 2;
+        tempProduct.price = tempProduct.amount * tempProduct.price;
+        localStorage.setItem('productOrder', JSON.stringify(cart));
+        renderOrder(cart);
+    // (-)
+    } else if (e.target.classList.contains("removeOrder")) {
+        console.log('REMOVE ORDER');
+        // let lowerTotal = e.target;
+        // let _id = lowerTotal.dataset._id;
+        // let tempProduct = cart.find(product => product._id === _id);
+        // tempProduct.total = tempProduct.total - 1;
+        // if(tempProduct.total > 0) {
+        //     cart.push(tempProduct.total);
+        //     localStorage.setItem('productOrder', JSON.stringify(cart));
+        //     lowerTotal.previousElementSibling.inner = tempProduct.total;
+    }
 });
 
 // ----------------------- login ---------------------------
@@ -135,14 +170,6 @@ function loginSuccess(res){
     console.log(window.location.pathname);
     console.log(res)
     window.location.pathname = '/shipping.html';
-
-
-    // --------- save user to localStorage ------------------
-    // const userOrder = JSON.stringify(res.data);
-    // localStorage.setItem('userorder', userOrder);
-    // const userStoredOrder = localStorage.getItem('userorder');
-    // const userOrderObj = JSON.parse(userStoredOrder)
-    // console.log(userOrderObj)
 
 }
 function loginError(err){
@@ -183,16 +210,16 @@ function createProductTemplate(product){
         <div class="col-10 mx-auto col-md-2">
             <!-- cart buttons -->
             <div class="d-flex justify-content-center align-items-center">
-                <span class="btn btn-black mx-1 removeOrder"  >-</span>
-                <span class="btn btn-black mx-1">2</span>
-                <span class="btn btn-black mx-1 addOrder"  >+</span>
+                <span class="btn btn-black mx-1 removeOrder" data-id="${product._id}">-</span>
+                <span class="btn btn-black mx-1 cart-amount">${product.amount || 1}</span>
+                <span class="btn btn-black mx-1 addOrder" data-id="${product._id}">+</span>
             </div>
             <!-- end of cart buttons -->
         </div>
         <!-- end of single column -->
             <!-- single column -->
         <div class="col-10 mx-auto col-md-2">
-            <p >$42.00</p>
+            <p class="priceTotal" >US$ ${product.amount ? product.price * product.amount : product.price}</p>
         </div>
         <!-- end of single column -->
     `
@@ -216,34 +243,67 @@ function orderError(e){
 };
 
 // --------------------- Cart fanctionality -----------------
+// .cart-amountis (quantity)
+// .removeOrder (-) 
+// .addOrder (+)
+// .priceTotal (total)
+// .cart-items (on navBar number 3 on cart icon)
+// #cart-total (price total without tax)
+// #price-pay (total price with tax )
+
+
+// function setCartValues(order) {
+//     let tempTotal = 0;
+//     let productsTotal = 0;
+//     order.map(product => {tempTotal += product.price * product.total;
+//     productsTotal += product.total;
+//     });
+//     cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
+//     cartProducts.innerText = productsTotal;
+    
+// }
 
 // $($orderData).on("click", function(e){
+//     // (+)
 //     if (e.target.classList.contains("addOrder")) {
-//         let order;
-//         if (localStorage.getItem('productOrder')) {
-//             order = JSON.parse(localStorage.getItem('productOrder'));
-//         } else {
-//             order = [];
-//         }
-//         const tempProduct = products.filter(item => item._id === e.target.getAttribute('data-id'))[0];
-//         tempProduct +1;
-//         order.push(tempProduct);
-//         localStorage.setItem('productOrder', JSON.stringify(order));
+//         let addTotal = e.target;
+//         let _id= addTotal.dataset._id;
+//         let tempProduct = cart.find(product => product._id === _id);
+//         tempProduct.total = tempProduct.total + 1;
+//         cart.push(tempProduct.total);
+//         localStorage.setItem('productOrder', JSON.stringify(cart));
+//     // (-)
 //     } else if (e.target.classList.contains("removeOrder")) {
-//             let order;
-//         if (localStorage.getItem('productOrder')) {
-//             order = JSON.parse(localStorage.getItem('productOrder'));
-//         } else {
-//             order = [];
+//         let lowerTotal = e.target;
+//         let _id = lowerTotal.dataset._id;
+//         let tempProduct = cart.find(product => product._id === _id);
+//         tempProduct.total = tempProduct.total - 1;
+//         if(tempProduct.total > 0) {
+//             cart.push(tempProduct.total);
+//             localStorage.setItem('productOrder', JSON.stringify(cart));
+//             lowerTotal.previousElementSibling.inner = tempProduct.total;
+//         }else{
+//             productOrder(_id)
 //         }
-//         const tempProduct = products.filter(item => item._id === e.target.getAttribute('data-id'))[0];
-//         tempProduct -1;
-//         order.push(tempProduct);
-//         localStorage.setItem('productOrder', JSON.stringify(order));
-        
-
 //     }
 // });
 
 
 
+// check money
+// function showTotals(){
+//     const total = [];
+//     const products = document.querySelectorAll(".product-price");
+//     products.forEach(function(product){
+//         total.push(parseFloat(item.textContent));
+//     });
+//     const totalMoney = tatal.reduce(function(total, product){
+//         total += product;
+//         return total;
+//     },0);
+//     const finalMoney = tatalMoney.toFixed(2);
+
+//     document.getElementById("cart-total").textContent = finalMoney;
+//     document.getElementsByClassName("cart-items").textContent = total.length;
+
+// }
