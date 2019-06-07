@@ -152,13 +152,17 @@ body {
 }
 .navbar-icon {
   font-size: 1.6rem;
+  cursor: pointer;
+}
+.navbar-icon:hover {
+color: var(--mainPink)
 }
 .navbar-cart-icon {
   color: var(--mainBlack);
   position: relative;
 }
 .navbar-cart-icon:hover {
-  color: var(--mainGrey);
+  color: var(--mainPink);
 }
 .cart-items {
   color: var(--mainWhite);
@@ -427,7 +431,7 @@ body {
   color: var(--mainYellow);
 }
 
-/* ########################## Login/singUp/Shipping ############################## */
+/* ########################## Login/singUp/Shipping/Profile/Search/Contact ############################## */
 .login-purple-pink {
   background: linear-gradient(145deg, #3f51b5, #e91e63);
 }
