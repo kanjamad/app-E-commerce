@@ -190,14 +190,6 @@ $($orderData).on("click", function(e){
             localStorage.setItem('productOrder', JSON.stringify(cart));
             renderOrder(cart);
         }
-
-        // let _id = lowerTotal.dataset._id;
-        // let tempProduct = cart.find(product => product._id === _id);
-        // tempProduct.total = tempProduct.total - 1;
-        // if(tempProduct.total > 0) {
-        //     cart.push(tempProduct.total);
-        //     localStorage.setItem('productOrder', JSON.stringify(cart));
-        //     lowerTotal.previousElementSibling.inner = tempProduct.total;
     }
 });
 
@@ -252,13 +244,18 @@ function renderOrder(ordersArr){
     const ordersHtml = getAllProductLocalHtml(ordersArr);
     $orderData.append(ordersHtml);
     let total = 0.00;
-    let finalPay = 0.00;
+    let finalPay = 24;
     cart.forEach(item => {
         const amount = item.amount || 1;
         total += item.price * amount;
     });
-
     $cartTotal.text(`$${total}`);
+
+    cart.forEach(pay => {
+        const totalAmount = pay.totalAmount || 1;
+        finalPay +=  pay.price * totalAmount;
+    });
+    $pricePay.text(`$${finalPay}`);
 
     
 };
