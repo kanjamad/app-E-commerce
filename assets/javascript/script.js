@@ -141,18 +141,23 @@ $($orderData).on("click", function(e){
     // (+)
     if (e.target.classList.contains("addOrder")) {
         console.log('ADD ORDER');
-        // let addTotal = e.target;
         let id = e.target.getAttribute('data-id');
         console.log(id);
         let tempProduct = cart.find(product => product._id === id);
-        tempProduct.amount = tempProduct.amount ? tempProduct.amount + 1 : tempProduct.amount = 2;
+        tempProduct.amount = tempProduct.amount ? tempProduct.amount + 1 : tempProduct.amount = 1;
         tempProduct.price = tempProduct.amount * tempProduct.price;
         localStorage.setItem('productOrder', JSON.stringify(cart));
         renderOrder(cart);
     // (-)
     } else if (e.target.classList.contains("removeOrder")) {
         console.log('REMOVE ORDER');
-        // let lowerTotal = e.target;
+        let id = e.target.getAttribute('data-id');
+        console.log(id);
+        let tempProduct = cart.find(product => product._id === id);
+        tempProduct.amount = tempProduct.amount ? tempProduct.amount -1 : tempProduct.amount = 1;
+        tempProduct.price = tempProduct.amount * tempProduct.price;
+        localStorage.setItem('productsOrder', JSON.stringify(cart));
+        renderOrder(cart);
         // let _id = lowerTotal.dataset._id;
         // let tempProduct = cart.find(product => product._id === _id);
         // tempProduct.total = tempProduct.total - 1;
@@ -203,7 +208,7 @@ function createProductTemplate(product){
         <!-- end of single column -->
         <!-- single column -->
         <div class="col-10 mx-auto col-md-2">
-            <p>${product.price}</p>
+            <p>US$ ${product.price}</p>
         </div>
         <!-- end of single column -->
         <!-- single column -->
@@ -252,58 +257,21 @@ function orderError(e){
 // #price-pay (total price with tax )
 
 
-// function setCartValues(order) {
-//     let tempTotal = 0;
-//     let productsTotal = 0;
-//     order.map(product => {tempTotal += product.price * product.total;
-//     productsTotal += product.total;
-//     });
-//     cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
-//     cartProducts.innerText = productsTotal;
-    
-// }
-
-// $($orderData).on("click", function(e){
-//     // (+)
-//     if (e.target.classList.contains("addOrder")) {
-//         let addTotal = e.target;
-//         let _id= addTotal.dataset._id;
-//         let tempProduct = cart.find(product => product._id === _id);
-//         tempProduct.total = tempProduct.total + 1;
-//         cart.push(tempProduct.total);
-//         localStorage.setItem('productOrder', JSON.stringify(cart));
-//     // (-)
-//     } else if (e.target.classList.contains("removeOrder")) {
-//         let lowerTotal = e.target;
-//         let _id = lowerTotal.dataset._id;
-//         let tempProduct = cart.find(product => product._id === _id);
-//         tempProduct.total = tempProduct.total - 1;
-//         if(tempProduct.total > 0) {
-//             cart.push(tempProduct.total);
-//             localStorage.setItem('productOrder', JSON.stringify(cart));
-//             lowerTotal.previousElementSibling.inner = tempProduct.total;
-//         }else{
-//             productOrder(_id)
-//         }
-//     }
-// });
-
-
 
 // check money
-// function showTotals(){
-//     const total = [];
-//     const products = document.querySelectorAll(".product-price");
-//     products.forEach(function(product){
-//         total.push(parseFloat(item.textContent));
-//     });
-//     const totalMoney = tatal.reduce(function(total, product){
-//         total += product;
-//         return total;
-//     },0);
-//     const finalMoney = tatalMoney.toFixed(2);
+function showTotals(){
+    const total = [];
+    const products = document.querySelectorAll(".product-price");
+    products.forEach(function(cart){
+        total.push(parseFloat(item.textContent));
+    });
+    const totalMoney = tatal.reduce(function(total, cart){
+        total += cart;
+        return total;
+    },0);
+    const finalMoney = tatalMoney.toFixed(2);
 
-//     document.getElementById("cart-total").textContent = finalMoney;
-//     document.getElementsByClassName("cart-items").textContent = total.length;
+    document.getElementById("cart-total").textContent = finalMoney;
+    document.getElementsByClassName("cart-items").textContent = total.length;
 
-// }
+}
