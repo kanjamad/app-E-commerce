@@ -149,14 +149,7 @@ function handleError(e){
 // ------------------------ Button get product to order ------------------
 
 $($productsData).on("click", function(e) {
-    // e.preventDefault();
     if (e.target.classList.contains('click-order')) {
-        // let cart;
-        // if (localStorage.getItem('productOrder')) {
-        //     cart = JSON.parse(localStorage.getItem('productOrder'));
-        // } else {
-        //     cart = [];
-        // }
         const product = products.filter(item => item._id === e.target.getAttribute('data-id'))[0];
         cart.push(product);
         localStorage.setItem('productOrder', JSON.stringify(cart));
@@ -250,17 +243,8 @@ function renderOrder(ordersArr){
         total += item.price * amount;
     });
     $cartTotal.text(`$${total}`);
-
-    // cart.forEach(pay => {
-    //     const totalAmount = pay.totalAmount || 1;
-    //     finalPay +=  pay.price * totalAmount;
-    // });
-    // $pricePay.text(`$${finalPay}`);
     totalAmount = total + finalPay
-    $pricePay.text(`$${totalAmount}`);
-
-
-    
+    $pricePay.text(`$${totalAmount}`);  
 };
 
 
@@ -268,32 +252,3 @@ function orderError(e){
     console.log('uh oh');
     $('#ordersTarget').text('Failed to load orders, is the server working?');
 };
-
-// --------------------- Cart fanctionality -----------------
-// .cart-amountis (quantity)
-// .removeOrder (-) 
-// .addOrder (+)
-// .priceTotal (total)
-// .cart-items (on navBar number 3 on cart icon)
-// #cart-total (price total without tax)
-// #price-pay (total price with tax )
-
-
-
-// check money
-// function showTotals(){
-//     const total = [];
-//     const products = document.querySelectorAll(".priceTotal");
-//     products.forEach(function(cart){
-//         total.push(parseFloat(item.textContent));
-//     });
-//     const totalMoney = total.reduce(function(total, cart){
-//         total += cart;
-//         return total;
-//     },0);
-//     const finalMoney = tatalMoney.toFixed(2);
-
-//     document.getElementById("cart-total").textContent = finalMoney;
-//     document.getElementsByClassName("cart-items").textContent = total.length;
-
-// }
