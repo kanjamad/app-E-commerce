@@ -233,18 +233,31 @@ function getAllProductLocalHtml(orders){
 function renderOrder(ordersArr){
     const $cartTotal = $('#cart-total');
     const $pricePay = $('#price-pay');
+    const $cartItems = $('.cart-items');
     $orderData.empty();
     const ordersHtml = getAllProductLocalHtml(ordersArr);
     $orderData.append(ordersHtml);
     let total = 0.00;
     let finalPay = 24;
+    let numberOnCart = 0;
+
+    //  total price
     cart.forEach(item => {
         const amount = item.amount || 1;
         total += item.price * amount;
     });
     $cartTotal.text(`$${total}`);
+
+    // caculate total price + tax + shipping
     totalAmount = total + finalPay
     $pricePay.text(`$${totalAmount}`);  
+
+    // number QUANTITY on navbar on cart icon
+    cart.forEach(iconOnCart=>{
+        const numberItem = iconOnCart.numberItem ||1;
+        numberOnCart += iconOnCart.amount * numberItem;
+    });
+    $cartItems.text(`${numberOnCart}`);
 };
 
 
