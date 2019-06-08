@@ -28,6 +28,7 @@ $(document).ready(function(){
             email: $('#userEmail').val(),
             password: $('#userPassword').val(),
             password2: $('#userPassword2').val(),
+            gender: $('#gender').val(),
         }),
         contentType: "application/json; charset=utf-8",
         dataType: "json",
@@ -92,8 +93,8 @@ function getProfileFormHtml(user){
 
         <select class="form-control form-control-sm bg-light" for="gender"  name="gender" id="gender">
                 <option value="">Your gender</option>
-                <option ${user.gender === "Female" ? 'selected' : null} value="F">Female</option>
-                <option ${user.gender === "Male" ? 'selected' : null} value="M">Male</option>
+                <option name="${user.gender === "Female" ? 'selected' : null} " value="Female">Female</option>
+                <option name="${user.gender === "Male" ? 'selected' : null}" value="Male">Male</option>
             </select>
     </div>
 
