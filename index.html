@@ -410,10 +410,44 @@
 <!-- end of footer -->
 
 
-    <!-- modal -->
+<!-- modal -->
+    <!-- modal update -->
+        <div class="row home-filler align-items-end pb-5 modal" id="update">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content pb-4 login-purple-pink">
+            <!-- modal header -->
+            <div class="modal-header">
+                <h5 class="modal-title text-capitalize text-warning"> Ap Shopping</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span class="text-white" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- end of modal header -->
+            <!-- update -->
+            <div class="col">
+                <div class="login-purple-pink p-3 shadow-lg-rounded">
+                    <div class="pt-3">
+                        <h2 class="text-white">
+                            Update Profile
+                        </h2>
+                    </div>
+        
+                    <!-- update form -->
+                    <form class="mt-5 " id="profileForm" >
+                        <!-- method: PUT  form -->
+                    </form>
+                    <!-- end of update form -->
 
-    <!-- modal  profile -->
-    <div class="modal fade home-filler" id="profile" tabindex="-1" role="dialog" >
+                </div>
+            </div>
+            <!--  end of uppdate form -->  
+            </div>
+        </div>
+        </div>
+    <!-- end of modal update -->
+
+        <!-- modal  profile -->
+        <div class="modal fade home-filler" id="profile" tabindex="-1" role="dialog" >
             <div class="modal-dialog " role="document">
                 <div class="modal-content pb-4 login-purple-pink">
                     <!-- modal header -->
@@ -427,15 +461,17 @@
     
                     <!-- profile card -->
             <div class="col">
-                <div class="login-purple-pink p-3 shadow-lg-rounded" id="userTarget" >
+                <div class="login-purple-pink p-3 shadow-lg-rounded"  >
                     <div class="pt-3">
                         <h2 class="text-white">
                             Profile
                         </h2>
                     </div>
         
-                        <!-- GET profile from API -->
-            
+                        <!-- <form class="mt-5" id="userTarget" data-toggle="modal" data-target="#update" > -->
+                        <form class="mt-5" id="userTarget" data-toggle="modal" data-target="#update">
+                            <!-- GET profile from API -->
+                            </form>
                 </div>
             </div>
         <!-- end of profile card -->
@@ -443,8 +479,6 @@
             </div>
         </div>
     <!-- end of profile -->
-    
-    
     
         <!-- modal search-->
         <div class="modal fade home-filler" id="search" tabindex="-1" role="dialog" >
@@ -493,8 +527,7 @@
             </div>
         </div>
     <!-- end of modal search-->
-    
-    
+
         <!-- modal contact-->
         <div class="modal fade home-filler" id="contact" tabindex="-1" role="dialog" >
             <div class="modal-dialog " role="document">
@@ -562,6 +595,9 @@
 
     <!-- jquery -->
     <script src="assets/javascript/jquery-3.4.1.js"></script>
+
+    <!-- user -->
+    <script src="assets/javascript/user.js"></script>
 
     <!-- main JavaScript -->
     <script src="assets/javascript/script.js"></script>

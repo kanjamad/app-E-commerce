@@ -42,7 +42,7 @@ $(document).ready(function(){
 
 function getUserHtml(user){
     return `
-    <form class="mt-5"  >
+
     
     <div class="form-group">
         <input  type="text" class="form-control form-control-sm bg-light" name="fullName" placeholder="${user.fullName}"/>
@@ -57,7 +57,7 @@ function getUserHtml(user){
     </div>
 
     <div class="mt-5">
-        <button  type="submit" class="btn btn-sm btn-light col" id="edit">Edit</button>
+        <button  type="submit" class="btn btn-sm btn-light col" id="edit" data-toggle="modal" data-target="#update">Edit</button>
     </div>
 
     <div class="mt-5">
@@ -67,7 +67,6 @@ function getUserHtml(user){
         </p>    
     </div>
 
-</form>
     `
 };
 
@@ -133,15 +132,9 @@ function userSuccess(json){
     user = json.data;
     renderUser(json.data);
     renderProfileForm(json.data);
-
-        // --------- save user to localStorage ------------------
-    // const userOrder = JSON.stringify(json.data);
-    // localStorage.setItem('userData', userOrder);
-    // const userStoredOrder = localStorage.getItem('userData');
-    // const userOrderObj = JSON.parse(userStoredOrder)
-    // console.log(userOrderObj)
-
+    // window.location.pathname = '/editProfile.html';
 };
+
 
 
 function userError(e){
@@ -154,7 +147,7 @@ function userError(e){
 function updateSuccess(res){
     console.log(res);
     console.log(window.location.pathname);
-    // window.location.pathname = '/index.html';
+    // window.location.pathname = "/editProfile.html";
         // success page pop up!!
 }
 function updateError(err){
