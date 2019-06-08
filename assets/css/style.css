@@ -165,7 +165,7 @@ color: var(--mainPink)
   color: var(--mainPink);
 }
 .cart-items {
-  color: var(--mainWhite);
+  color: var(--mainBlack);
   position: absolute;
   top: -15%;
   right: -25%;

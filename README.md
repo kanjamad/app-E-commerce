@@ -87,6 +87,8 @@ ___
 ![cart-items](assets/images/readme/cart-item-H.png "Cart items")
 
 ```
+<!-- CSS -->
+
 .cart-items {
   color: var(--mainWhite);
   position: absolute;
@@ -104,6 +106,8 @@ ___
 ![cart-items](assets/images/readme/cart-in-out.png "add to cart")
 
 ```
+<!-- CSS -->
+
 .featured-container {
   background: var(--mainWhite);
   position: relative;
@@ -125,11 +129,82 @@ ___
 ```
 
 
+![Quantity](assets/images/readme/Quantity.png "Quantity")
+
+```
+// ----------------------- Update Product Quantity -----------------------
+
+$($orderData).on("click", (e) => {
+
+    // (+)
+    if (e.target.classList.contains("addOrder")) {
+        console.log('ADD ORDER');
+        let id = e.target.getAttribute('data-id');
+        console.log(id);
+        let tempProduct = cart.find(product => product._id === id);
+        tempProduct.amount = tempProduct.amount ? tempProduct.amount + 1 : tempProduct.amount = 2;
+        localStorage.setItem('productOrder', JSON.stringify(cart));
+        renderOrder(cart);
+    // (-)
+    } else if (e.target.classList.contains("removeOrder")) {
+        console.log('REMOVE ORDER');
+        let id = e.target.getAttribute('data-id');
+        console.log(id);
+        let tempProduct = cart.find(product => product._id === id);
+        if (tempProduct.amount > 1) {
+            tempProduct.amount = tempProduct.amount ? tempProduct.amount -1 : tempProduct.amount = 1;
+            localStorage.setItem('productOrder', JSON.stringify(cart));
+            renderOrder(cart);
+        }
+    }
+});
+
+```
+
+
+![total](assets/images/readme/total.png "total")
+
+```
+renderOrder(ordersArr) => {
+    const $cartTotal = $('#cart-total');
+    const $pricePay = $('#price-pay');
+    const $cartItems = $('.cart-items');
+    $orderData.empty();
+    const ordersHtml = getAllProductLocalHtml(ordersArr);
+    $orderData.append(ordersHtml);
+    let total = 0.00;
+    let finalPay = 24;
+    let numberOnCart = 0;
+
+    //  total price
+    cart.forEach(item => {
+        const amount = item.amount || 1;
+        total += item.price * amount;
+    });
+    $cartTotal.text(`$${total}`);
+
+    // caculate total price + tax + shipping
+    totalAmount = total + finalPay
+    $pricePay.text(`$${totalAmount}`);  
+
+    // number QUANTITY on navbar on cart icon
+    cart.forEach(iconOnCart => {
+        const numberItem = iconOnCart.numberItem ||1;
+        numberOnCart += iconOnCart.amount * numberItem;
+    });
+    $cartItems.text(`${numberOnCart}`);
+};
+
+```
+
+
+
+
 ![Store-Products](assets/images/readme/Store-Products.png "Store Products in Local Storage")
 
 ```
 
-function handleSuccess(json){
+ handleSuccess(json) => {
     console.log(json.data);
     renderProduct(json.data);
 

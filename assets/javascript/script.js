@@ -168,7 +168,6 @@ $($orderData).on("click", function(e){
         console.log(id);
         let tempProduct = cart.find(product => product._id === id);
         tempProduct.amount = tempProduct.amount ? tempProduct.amount + 1 : tempProduct.amount = 2;
-        // tempProduct.price = tempProduct.amount * tempProduct.price;
         localStorage.setItem('productOrder', JSON.stringify(cart));
         renderOrder(cart);
     // (-)
@@ -179,7 +178,6 @@ $($orderData).on("click", function(e){
         let tempProduct = cart.find(product => product._id === id);
         if (tempProduct.amount > 1) {
             tempProduct.amount = tempProduct.amount ? tempProduct.amount -1 : tempProduct.amount = 1;
-            // tempProduct.price = tempProduct.price / tempProduct.amount;
             localStorage.setItem('productOrder', JSON.stringify(cart));
             renderOrder(cart);
         }
