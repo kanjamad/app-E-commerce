@@ -57,14 +57,12 @@ function getUserHtml(user){
         <input  type="text" class="form-control form-control-sm bg-light" name="gender" placeholder="${user.gender}"/>
     </div>
 
-    <div class="mt-5">
-        <button  type="submit" class="btn btn-sm btn-light col" id="edit" data-toggle="modal" data-target="#update">Edit</button>
-    </div>
+   
 
     <div class="mt-5">
         <p class="text-white text-center">
-            Want to shopping more?
-            <a href="index.html" data-dismiss="modal" aria-hidden="true" class="text-warning">Continue Shopping</a>
+            Want to update your profile?
+            <a href="index.html" data-dismiss="modal" aria-hidden="true" class="text-warning"> <i class="fas fa-user-edit"></i></a>
         </p>    
     </div>
 
@@ -92,7 +90,6 @@ function getProfileFormHtml(user){
     <div class="form-group">
 
         <select class="form-control form-control-sm bg-light" for="gender"  name="gender" id="gender">
-                <option value="">Your gender</option>
                 <option name="${user.gender === "Female" ? 'selected' : null} " value="Female">Female</option>
                 <option name="${user.gender === "Male" ? 'selected' : null}" value="Male">Male</option>
             </select>
@@ -148,7 +145,7 @@ function userError(e){
 function updateSuccess(res){
     console.log(res);
     console.log(window.location.pathname);
-    // window.location.pathname = "/editProfile.html";
+    window.location.pathname = "/index.html";
         // success page pop up!!
 }
 function updateError(err){
