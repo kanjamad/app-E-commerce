@@ -82,7 +82,7 @@ $(document).ready(function(){
 function loginSuccess(res){
     console.log(window);
     console.log(window.location.pathname);
-    alert(JSON.stringify(res))
+    // alert(JSON.stringify(res))
     localStorage.setItem('ap_user', res.session.currentUser.id);
     window.location.pathname = '/shipping.html';
 
