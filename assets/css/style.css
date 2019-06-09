@@ -178,6 +178,11 @@ color: var(--mainPink)
   -ms-border-radius:50% ;
   -o-border-radius:50% ;
 }
+
+
+.fashion{
+  text-decoration: none !important;
+}
 /*--------------------
         banner
  ----------------------- */
