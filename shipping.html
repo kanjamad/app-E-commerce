@@ -84,7 +84,7 @@
 <!-- -------------------------------------end of NavBar----------------------------------------     -->
         <div class="banner-shipping d-flex align-items-center justify-content-center pl-3 pl-lg-5 text-center">
             <div>
-                <h1 class="text-capitalize text-yellow text-slanted display">ap shopping</h1>
+                <!-- <h1 class="text-capitalize text-yellow text-slanted display">Order confirmation</h1> -->
                 <h1 class="text-capitalize font-weight-bold display-4">Order confirmation</h1>
             </div>
         </div>
@@ -233,15 +233,15 @@
                     <input type="text"  class="form-control form-control-sm bg-light" name="address2" placeholder="Address 2" >
                 </div>
 
-                <div class="mt-5">
-                    <button class="btn btn-sm btn-light col">Save</button>
+                <div class="mt-5" data-toggle="modal" data-target="#shipping">
+                    <button class="btn btn-sm btn-light col" >Save</button>
                 </div>
 
                 <div class="mt-5">
-                    <p class="text-white text-center">
-                        Want to shopping more?
-                        <a href="index.html" class="text-warning">Continue Shopping</a>
-                    </p>    
+                    <h1 class="text-white text-center">
+                        Click to payment => <span>
+                        <a href="index.html"  data-toggle="modal" data-target="#shipping"class="text-warning"><strong><i class="fab fa-cc-paypal"></i></strong></a></span>
+                    </h1>    
                 </div>
 
             </form>
@@ -255,6 +255,56 @@
 
  
 <!-- modal -->
+    <!-- modal payment -->
+        <div class="modal fade banner" id="shipping" tabindex="-1" role="dialog" >
+                <div class="modal-dialog " role="document">
+                    <div class="modal-content pb-4 login-purple-pink">
+                        <!-- modal header -->
+                        <div class="modal-header">
+                            <h5 class="modal-title text-capitalize text-warning"> Ap Shopping</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span class="text-white" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!-- end of modal header -->
+        
+                        <!-- payment card -->
+                <div class="col">
+                    <div class="login-purple-pink p-3 shadow-lg-rounded">
+                        <div class="pt-3">
+                            <h2 class="text-white">
+                                Payment
+                            </h2>
+                        </div>
+            
+                        <form class="mt-5" >
+            
+                            <div class="form-group">
+                                <input  type="text" class="form-control form-control-sm bg-light" name="search" placeholder="Search">
+                            </div>
+            
+                            <div class="mt-5">
+                                <button  type="submit" class="btn btn-sm btn-light col-3 float-right ">Pay Now!</button>
+                            </div>
+            
+                            <div class="mt-5">
+                                <p class="text-white text-center">
+                                    want to shopping more?
+                                    <a href="index.html"  data-dismiss="modal" aria-hidden="true" class="text-warning" >Continue Shopping</a>
+                                </p>    
+                            </div>
+            
+                        </form>
+                    </div>
+                </div>
+            <!-- end of payment card -->
+                    </div>
+                </div>
+            </div>
+    <!-- end of modal payment -->
+
+
+
     <!-- modal update -->
     <div class="row banner align-items-end pb-5 modal" id="update">
             <div class="modal-dialog " role="document">
