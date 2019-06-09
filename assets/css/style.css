@@ -58,18 +58,11 @@ body {
 .banner-payment 
 .banner-profile {
   min-height: 60vh;
-  background: -webkit-gradient(
-      linear,
-      left top, left bottom,
-      from(rgba(245, 121, 224, 0.5)),
-      to(rgba(255, 255, 255, 0.5))
-    ),
-    url("../images/women-page.jpg") center/cover fixed no-repeat;
   background: linear-gradient(
-      rgba(245, 121, 224, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("../images/women-page.jpg") center/cover fixed no-repeat;
+    rgba(245, 121, 224, 0.5),
+    rgba(255, 255, 255, 0.5)
+  ),
+  url("../images/hhw.png") center/cover fixed no-repeat;
 }
 .banner-men-products {
   min-height: 60vh;
@@ -88,18 +81,8 @@ body {
 }
 .banner-kids-products {
   min-height: 60vh;
-  background: -webkit-gradient(
-      linear,
-      left top, left bottom,
-      from(rgba(245, 121, 224, 0.5)),
-      to(rgba(255, 255, 255, 0.5))
-    ),
-    url("../images/kids-page.jpg") center/cover fixed no-repeat;
-  background: linear-gradient(
-      rgba(245, 121, 224, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("../images/kids-page.jpg") center/cover fixed no-repeat;
+  background: 
+    url("../images/kid+tuna.png") center/cover fixed no-repeat;
 }
 .banner-payment {
   min-height: 60vh;
@@ -188,11 +171,16 @@ color: var(--mainPink)
  ----------------------- */
 .banner {
   min-height: calc(100vh - 101px);
-  background: url("/assets/images/banner.JPG");
+  /* background: url("/assets/images/home-filler.png"); */
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;   
+  background-repeat: no-repeat;  
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 121, 224, 0.5)), to(rgba(0, 0, 0, 0.5))), 
+  url("../images/home-filler.png") center/cover fixed no-repeat;
+  background: linear-gradient(rgba(245, 121, 224, 0.5), rgba(0, 0, 0, 0.5)), 
+  url("../images/home-filler.png") center/cover fixed no-repeat;
+
 }
 /*--------------------
         services
@@ -277,11 +265,10 @@ color: var(--mainPink)
       home filler
  ----------------------- */
 .home-filler {
-  min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 121, 224, 0.5)), to(rgba(0, 0, 0, 0.5))), 
-  url("../images/home-filler.png") center/cover fixed no-repeat;
-  background: linear-gradient(rgba(245, 121, 224, 0.5), rgba(0, 0, 0, 0.5)), 
-  url("../images/home-filler.png") center/cover fixed no-repeat;
+  min-height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../images/women+stand.png") center/cover fixed no-repeat;
+  
 }
 .collection-link {
   color: var(--mainYellow);
