@@ -1,16 +1,4 @@
 console.log("hi.....filter")
-// filter buttons
-// $(document).ready(function(){
-// select all filter buttons
-// const filterBtn = document.querySelectorAll(".filter-btn");
-// console.log(filterBtn)
-
-// filterBtn.forEach(function(btn){
-//     btn.addEventListener("click", function(e){
-//         e.preventDefault();
-
-//     })
-// })
 
 // ----------- search box ------------
 

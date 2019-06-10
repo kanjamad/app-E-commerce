@@ -101,13 +101,13 @@
                         <div class="products-categories-underline"></div>
                     </div>
                     <!-- single link -->
-                    <a href="#" class="d-block products-categories-link">
-                        <p class="mb-0">clothing</p>
+                    <a href="#" class="d-block products-categories-link  filter-btn" data-filter="boys" >
+                        <p class="mb-0">boys</p>
                     </a>
                     <!-- end of single link -->
                     <!-- single link -->
-                    <a href="#" class="d-block products-categories-link">
-                        <p class="mb-0">swimwears</p>
+                    <a href="#" class="d-block products-categories-link  filter-btn" data-filter="girls" >
+                        <p class="mb-0">girls</p>
                     </a>
                     <!-- end of single link -->
                     <!-- single link -->
@@ -205,11 +205,11 @@
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text form-icon">
+                                <span class="input-group-text form-icon seaech-box" id="search-icon">
                                     <i class="fa fa-search"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control text-capitalize" placeholder="search by name" name="" id="mySearch">
+                            <input type="text" class="form-control text-capitalize" placeholder="search by name" name="" id="search-item">
                         </div>
                     </form>
                     <!-- end of title -->
@@ -218,9 +218,9 @@
 
                 <!-- products img -->
                 <div class="col-10 col-md-7 col-lg-9 mx-auto my-3">
-                    <div class="row">
+                    <div class="row" id="store-items">
                         <!-- single product -->
-                        <div class="mx-auto col-md-6 col-lg-4">
+                        <div class="mx-auto col-md-6 col-lg-4 store-item  dress" data-item="girls">
                             <div class="featured-container p-5">
                                 <img src="assets/images/kids-products/Girls Contrast Sequin Hoodie Dress.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -233,7 +233,7 @@
                         </div>
                     <!-- end single product -->
                     <!-- single product -->
-                    <div class="mx-auto col-md-6 col-lg-4">
+                    <div class="mx-auto col-md-6 col-lg-4 store-item  dress" data-item="boys">
                             <div class="featured-container p-5">
                                 <img src="assets/images/kids-products/Boys Allover Star Print Curved Hem Shirt.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -246,7 +246,7 @@
                         </div>
                     <!-- end single product -->
                     <!-- single product -->
-                    <div class="mx-auto col-md-6 col-lg-4">
+                    <div class="mx-auto col-md-6 col-lg-4 store-item  dress" data-item="boys">
                             <div class="featured-container p-5">
                                 <img src="assets/images/kids-products/Boys Smile Print Tee.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -259,7 +259,7 @@
                         </div>
                     <!-- end single product -->
                     <!-- single product -->
-                    <div class="mx-auto col-md-6 col-lg-4">
+                    <div class="mx-auto col-md-6 col-lg-4 store-item  dress" data-item="boys">
                             <div class="featured-container p-5">
                                 <img src="assets/images/kids-products/boy.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -272,7 +272,7 @@
                         </div>
                     <!-- end single product -->
                     <!-- single product -->
-                    <div class="mx-auto col-md-6 col-lg-4">
+                    <div class="mx-auto col-md-6 col-lg-4 store-item  dress" data-item="girls">
                             <div class="featured-container p-5">
                                 <img src="assets/images/kids-products/Girls Tropical Print Ruffle Sleeve Dress.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -285,7 +285,7 @@
                         </div>
                     <!-- end single product -->
                     <!-- single product -->
-                    <div class="mx-auto col-md-6 col-lg-4">
+                    <div class="mx-auto col-md-6 col-lg-4 store-item  dress" data-item="girls">
                             <div class="featured-container p-5">
                                 <img src="assets/images/kids-products/girl.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -563,8 +563,11 @@
     <!-- jquery -->
     <script src="assets/javascript/jquery-3.4.1.js"></script>
 
-     <!-- user -->
-     <script src="assets/javascript/user.js"></script>
+    <!-- filter -->
+    <script src="assets/javascript/filter.js"></script>
+
+    <!-- user -->
+    <script src="assets/javascript/user.js"></script>
 
     <!-- main JavaScript -->
     <script src="assets/javascript/script.js"></script>
