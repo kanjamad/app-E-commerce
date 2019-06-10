@@ -16,7 +16,7 @@ This app ....
 2. Login
 3. Add products to cart
 4. Remove products from cart
-5. Payment
+
 
 ___
 
@@ -24,12 +24,19 @@ ___
 1. User can signup/login.
 2. User can Edit your Profile.
 3. User can add products to cart and remove products.
-4. User can edit shipping address.
-5. User can see your old products.
 6. User can shopping from category.
-7. User can add products, remove products from cart and read commemt with out login.
-8. User need to login if want to order and write comment.
-9. User can payment
+7. User can add products, remove products from cart with out login.
+8. User need to login if want to order.
+
+
+___
+## Strech Goal
+1. User can edit shipping address.
+2. User can see your old products.
+3. User need to login if want to order and write comment.
+4. User can comment and rate.
+5. User can payment ( paypal or stripe)
+
 
 ___
 
@@ -47,8 +54,6 @@ ___
 ### Backend
 1. Node.js
 2. MogoDB
-3. Stripe
-4. ejs
 5. nodemon
 6. Mongoose
 

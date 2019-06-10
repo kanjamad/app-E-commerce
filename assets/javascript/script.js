@@ -117,7 +117,7 @@ function getProductHtml(product){
                 <button class="featured-store-link text-captilaze click-order" data-id=${product._id}><i class="fas fa-shopping-cart"></i> add to cart </button>
             </div>
             <h6 class="text-capitalize text-center my-2">${product.productName}</h6>
-            <h6 class="text-center"><span class="text-muted old-price mx-2">${product.oldPrice}</span><span class"product-price">${product.price}</span></h6>
+            <h6 class="text-center"><span class="text-muted old-price mx-2">${product.oldPrice}</span><span class"product-price">$${product.price}</span></h6>
         </div>
         <!-- end single product -->
     `
