@@ -199,7 +199,6 @@ renderOrder(ordersArr) => {
 
 
 
-
 ![Store-Products](assets/images/readme/Store-Products.png "Store Products in Local Storage")
 
 ```
@@ -217,7 +216,15 @@ renderOrder(ordersArr) => {
 };
 
 ```
-___
+
+
+### Bootstrap Products page category column
+
+![category column](assets/images/readme/cate-col.png "Bootstrap Products page category column")
+
+![category column](assets/images/readme/col.png "Bootstrap Products page category column")
+
+---
 
 ### CSS units for font-size: px | em | rem
 
