@@ -100,23 +100,28 @@
                         <div class="products-categories-underline"></div>
                     </div>
                     <!-- single link -->
-                    <a href="#" class="d-block products-categories-link">
-                        <p class="mb-0">clothing</p>
+                    <a href="#" class="d-block products-categories-link  filter-btn" data-filter="summer" >
+                        <p class="mb-0">summer</p>
                     </a>
                     <!-- end of single link -->
                     <!-- single link -->
-                    <a href="#" class="d-block products-categories-link">
-                        <p class="mb-0">swimwears</p>
+                    <a href="#" class="d-block products-categories-link  filter-btn" data-filter="pants" >
+                        <p class="mb-0">pants</p>
                     </a>
                     <!-- end of single link -->
                     <!-- single link -->
-                    <a href="#" class="d-block products-categories-link">
-                        <p class="mb-0">shoes</p>
+                    <a href="#" class="d-block products-categories-link  filter-btn" data-filter="sweatshirt" >
+                        <p class="mb-0">sweatshirt</p>
                     </a>
                     <!-- end of single link -->
                     <!-- single link -->
-                    <a href="#" class="d-block products-categories-link">
-                        <p class="mb-0">sleepwars</p>
+                    <a href="#" class="d-block products-categories-link  filter-btn" data-filter="jeans" >
+                        <p class="mb-0">jeans</p>
+                    </a>
+                    <!-- end of single link -->
+                     <!-- single link -->
+                     <a href="#" class="d-block products-categories-link  filter-btn" data-filter="polo" >
+                        <p class="mb-0">polo</p>
                     </a>
                     <!-- end of single link -->
                     <!-- end of title -->
@@ -205,20 +210,20 @@
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text form-icon">
+                                <span class="input-group-text form-icon seaech-box" id="search-icon">
                                     <i class="fa fa-search"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control text-capitalize" placeholder="search by name" name="" id="mySearch">
+                            <input type="text" class="form-control text-capitalize" placeholder="search by name" name="" id="search-item">
                         </div>
                     </form>
                     <!-- end of title -->
                 </div>
                 <!-- products img -->
                 <div class="col-10 col-md-7 col-lg-9 mx-auto my-3">
-                    <div class="row">
+                    <div class="row"  id="store-items">
                         <!-- single product -->
-                        <div class="mx-auto col-md-6 col-lg-4">
+                        <div class="mx-auto col-md-6 col-lg-4 store-item  pants" data-item="pants">
                             <div class="featured-container p-5">
                                 <img src="assets/images/men-products/Men Drawstring Waist Pants.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -231,7 +236,7 @@
                         </div>
                     <!-- end single product -->
                     <!-- single product -->
-                    <div class="mx-auto col-md-6 col-lg-4">
+                    <div class="mx-auto col-md-6 col-lg-4 store-item  sweatshirt" data-item="sweatshirt">
                             <div class="featured-container p-5">
                                 <img src="assets/images/men-products/Men Camo Hooded Sweatshirt.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -244,7 +249,7 @@
                         </div>
                     <!-- end single product -->
                     <!-- single product -->
-                    <div class="mx-auto col-md-6 col-lg-4">
+                    <div class="mx-auto col-md-6 col-lg-4 store-item  polo" data-item="polo">
                             <div class="featured-container p-5">
                                 <img src="assets/images/men-products/Men Embroidery Detail Colorblock Polo Shirt.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -257,7 +262,7 @@
                         </div>
                     <!-- end single product -->
                     <!-- single product -->
-                    <div class="mx-auto col-md-6 col-lg-4">
+                    <div class="mx-auto col-md-6 col-lg-4 store-item  summer" data-item="summer">
                             <div class="featured-container p-5">
                                 <img src="assets/images/men-products/Men Tropical Print Shirt.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -270,7 +275,7 @@
                         </div>
                     <!-- end single product -->
                     <!-- single product -->
-                    <div class="mx-auto col-md-6 col-lg-4">
+                    <div class="mx-auto col-md-6 col-lg-4 store-item  summer" data-item="summer">
                             <div class="featured-container p-5">
                                 <img src="assets/images/men-products/Men Tropical Print Short Sleeve Shirt.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -283,7 +288,7 @@
                         </div>
                     <!-- end single product -->
                     <!-- single product -->
-                    <div class="mx-auto col-md-6 col-lg-4">
+                    <div class="mx-auto col-md-6 col-lg-4 store-item  summer" data-item="summer">
                             <div class="featured-container p-5">
                                 <img src="assets/images/men-products/Tropical Print Curved Hem Shirt.png" class="img-fluid" alt="product"/>
                                 <!-- <span class="featured-search-icon" 
@@ -561,6 +566,9 @@
 
     <!-- jquery -->
     <script src="assets/javascript/jquery-3.4.1.js"></script>
+
+    <!-- filter -->
+    <script src="assets/javascript/filter.js"></script>
 
     <!-- user -->
     <script src="assets/javascript/user.js"></script>
