@@ -3,7 +3,7 @@
 
 This app ....
 
-* [Link to project hosted on Heroku](https://#name.herokuapp.com/)
+* [Link to project hosted on Netlify](https://kanjamad-e-commerce-project.netlify.com/)
 * [Link to project hosted on Github](https://github.com/kanjamad/app-E-commerce)
 * [Link to project hosted on trello](https://trello.com/b/tk3FQbjQ/final-project)
 * [Link to backend API server project hosted on heroku](https://kanjamadapishopping.herokuapp.com/)
