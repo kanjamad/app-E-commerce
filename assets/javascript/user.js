@@ -146,7 +146,7 @@ function userSuccess(json){
 
 function userError(e){
     console.log('uh oh', e);
-    $('#userTarget').text('Failed to load User, is the server working?');
+    $('#userTarget').text('Failed to load User, please login when you check out click on cart icon');
 };
 
 // ----------------------- Update User---------------------------
